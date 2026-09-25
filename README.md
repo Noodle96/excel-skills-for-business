@@ -14,10 +14,9 @@ Ver el temario completo en [SYLLABUS.md](SYLLABUS.md).
 ## Cómo está organizado
 
 - Cada curso tiene su propia carpeta (`01-essentials`, `02-intermediate-1`, ...) con un `README.md` que lista sus módulos como checklist.
-- Dentro de cada curso, cada módulo (semana) tiene su propia subcarpeta `modulo-01`, `modulo-02`, ... en tres lugares:
+- Dentro de cada curso, cada módulo (semana) tiene su propia subcarpeta `modulo-01`, `modulo-02`, ... en dos lugares:
   - `notas/modulo-NN/` — apuntes de teoría en Markdown, varios `.md` por módulo (uno por tema).
-  - `ejercicios/modulo-NN/` — archivos `.xlsx` de práctica propios.
-  - `material-curso/modulo-NN/` — archivos `.xlsx` que entrega Coursera, resueltos directamente sobre el original.
+  - `material_curso/modulo-NN/` — archivos `.xlsx` que entrega Coursera. Cada ejercicio viene en dos versiones: el que termina en `Soln` es la solución; el otro (mismo nombre sin `Soln`) es el que se resuelve directamente, sin copia aparte.
 - `recursos/` — chuletas transversales (fórmulas, atajos de teclado, glosario) que aplican a toda la especialización, no a un curso en particular.
 
 ## Recursos rápidos
