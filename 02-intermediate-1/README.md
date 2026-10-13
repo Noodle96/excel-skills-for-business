@@ -28,6 +28,6 @@ Al terminar el curso podrás:
 | [x] 02 | Text and Date Functions | [notas](notas/modulo-02/) |
 | [x] 03 | Named Ranges | [notas](notas/modulo-03/) |
 | [x] 04 | Summarising Data | [notas](notas/modulo-04/) |
-| [ ] 05 | Tables | [notas](notas/modulo-05/) |
+| [x] 05 | Tables | [notas](notas/modulo-05/) |
 | [ ] 06 | Pivot Tables, Charts and Slicers | [notas](notas/modulo-06/) |
 | [ ] 07 | Final Assessment | |
