@@ -30,4 +30,4 @@ Al terminar el curso podrás:
 | [x] 04 | Summarising Data | [notas](notas/modulo-04/) |
 | [x] 05 | Tables | [notas](notas/modulo-05/) |
 | [x] 06 | Pivot Tables, Charts and Slicers | [notas](notas/modulo-06/) |
-| [ ] 07 | Final Assessment | |
+| [x] 07 | Final Assessment | |
