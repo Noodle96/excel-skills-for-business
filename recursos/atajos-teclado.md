@@ -2,7 +2,7 @@
 
 En Mac, `Cmd` sustituye a `Ctrl` salvo que se indique otra cosa. Lista completa: [Microsoft Support (Windows)](https://support.office.com/en-us/article/Excel-keyboard-shortcuts-and-function-keys-for-Windows-1798d9d5-842a-42b8-9c99-9b7213f0040f) · [Microsoft Support (Mac)](https://support.office.com/en-us/article/Keyboard-shortcuts-in-Excel-2016-for-Mac-acf5419e-1f87-444d-962f-4e951a658ccd).
 
-> Cobertura: Essentials (módulos 1-6) e Intermediate I (módulos 1-6). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulo 1). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 ## Archivo e impresión
 | Atajo | Acción | Dónde se vio |
@@ -38,8 +38,8 @@ En Mac, `Cmd` sustituye a `Ctrl` salvo que se indique otra cosa. Lista completa:
 | `Ctrl` + clic (dentro de una función) | Inserta la coma entre referencias, ej. `CONCAT(A2,D2,G2)` | Intermediate I M2 |
 | `F3` | Pegar nombre (lista de rangos con nombre) | Intermediate I M3 |
 | `Ctrl + F3` | Administrador de nombres (solo Windows) | Intermediate I M3 |
-| `Cmd + fn + F3` | Definir nombre (solo Mac) | Intermediate I M3 |
-| `Ctrl + Shift + F3` (Mac: `Cmd + Shift + fn + F3`) | Crear nombres desde la selección | Intermediate I M3 |
+| `Cmd + fn + F3` · `Cmd + F3` · `Ctrl + L` | Definir nombre (solo Mac; el Intermediate I indica la primera forma, el Intermediate II las otras dos, según cómo use las teclas F el teclado) | Intermediate I M3, Intermediate II M1 |
+| `Ctrl + Shift + F3` (Mac: `Cmd + Shift + fn + F3` o `Cmd + Shift + F3`) | Crear nombres desde la selección | Intermediate I M3, Intermediate II M1 |
 
 ## Formato
 | Atajo | Acción | Dónde se vio |

@@ -2,7 +2,7 @@
 
 Funciones y sintaxis vistas hasta ahora, con el módulo donde se explican. Se usan los nombres en inglés de las funciones, como en el curso. En países donde la coma es separador decimal, los argumentos se separan con `;` en vez de `,`.
 
-> Cobertura: Essentials (módulos 1-6) e Intermediate I (módulos 1-6). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulo 1). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 ## Básicas y cálculo
 
@@ -24,6 +24,10 @@ Funciones y sintaxis vistas hasta ahora, con el módulo donde se explican. Se us
 | `COUNTIFS` | `=COUNTIFS(criteria_range1, criteria1, [criteria_range2, criteria2]…)` | Cuenta las filas que cumplen **todos** los criterios (`COUNTIF` es la versión de un solo criterio) | [Intermediate I M4](../02-intermediate-1/notas/modulo-04/04-summarising-data.md) |
 | `SUMIFS` | `=SUMIFS(sum_range, criteria_range1, criteria1, …)` | Suma solo las filas que cumplen los criterios. **El rango a sumar va primero** (en la antigua `SUMIF` va al final) | [Intermediate I M4](../02-intermediate-1/notas/modulo-04/04-summarising-data.md) |
 | `AVERAGEIFS` | `=AVERAGEIFS(average_range, criteria_range1, criteria1, …)` | Promedio con criterios (mismo orden que `SUMIFS`) | [Intermediate I M4](../02-intermediate-1/notas/modulo-04/04-summarising-data.md) |
+
+**Patrones útiles con criterios**:
+- **Ganancia por grupo** (precio − costo): `=SUMIFS(precio, estado, M10) - SUMIFS(costo, estado, M10)`. El criterio apunta a la celda de una lista desplegable, no a un texto fijo — [Intermediate II M1](../03-intermediate-2/notas/modulo-01/assessment.md).
+- **Evitar duplicados** (validación personalizada): `=COUNTIF($B$2:$B$61,B2)=1` — [Intermediate II M1](../03-intermediate-2/notas/modulo-01/01-data-validation.md).
 
 **Operadores en los criterios** (con comillas): `"=50"`, `"<>50"`, `">50"`, `">=50"`, `"<50"`, `"<=50"`. Con fechas: `"<2015-01-01"`. Con una celda: `">"&B1`. **Comodines** (solo texto): `?` = una letra, `*` = varias (`"Small *"`). No distinguen mayúsculas/minúsculas.
 
@@ -75,6 +79,8 @@ Funciones y sintaxis vistas hasta ahora, con el módulo donde se explican. Se us
 | Texto en columnas | Dividir una columna en varias, una sola vez (para algo dinámico, usar `LEFT`/`MID`/`RIGHT`) | [Intermediate I M2](../02-intermediate-1/notas/modulo-02/02-text-date-functions.md) |
 | Subtotal | Subtotales por grupo en un **rango normal** (hay que convertir la tabla a rango y ordenar antes) | [Intermediate I M5](../02-intermediate-1/notas/modulo-05/05-tables.md) |
 | Tabla dinámica | Resumir y explorar muchos datos; varias funciones por campo, Top N, "Mostrar valores como" | [Intermediate I M6](../02-intermediate-1/notas/modulo-06/06-pivot-tables-charts-slicers.md) |
+| Validación de datos (Datos > Validación de datos) | Limitar lo que acepta una celda: tipo (decimal, entero, fecha, lista, longitud o personalizada con fórmula), mensaje de entrada y de error. Solo controla lo que se **escribe**; para revisar datos ya existentes, *Rodear con un círculo datos no válidos* | [Intermediate II M1](../03-intermediate-2/notas/modulo-01/01-data-validation.md) |
+| Formato condicional con fórmula | Resaltar celdas según una fórmula VERDADERO/FALSO, incluso comparando contra otra celda (ej. `$N$14`) | [Intermediate II M1](../03-intermediate-2/notas/modulo-01/01-data-validation.md) |
 
 ## Por completar
 
