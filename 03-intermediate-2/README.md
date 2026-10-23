@@ -33,7 +33,7 @@ Al terminar el curso podrás:
 | Módulo | Tema | Notas |
 |---|---|---|
 | [x] 01 | Data Validation | [notas](notas/modulo-01/) |
-| [ ] 02 | Conditional Logic | [notas](notas/modulo-02/) |
+| [x] 02 | Conditional Logic | [notas](notas/modulo-02/) |
 | [ ] 03 | Automating Lookups | [notas](notas/modulo-03/) |
 | [ ] 04 | Formula Auditing and Protection | [notas](notas/modulo-04/) |
 | [ ] 05 | Data Modelling | [notas](notas/modulo-05/) |
