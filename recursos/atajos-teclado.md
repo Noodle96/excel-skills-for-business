@@ -2,7 +2,7 @@
 
 En Mac, `Cmd` sustituye a `Ctrl` salvo que se indique otra cosa. Lista completa: [Microsoft Support (Windows)](https://support.office.com/en-us/article/Excel-keyboard-shortcuts-and-function-keys-for-Windows-1798d9d5-842a-42b8-9c99-9b7213f0040f) · [Microsoft Support (Mac)](https://support.office.com/en-us/article/Keyboard-shortcuts-in-Excel-2016-for-Mac-acf5419e-1f87-444d-962f-4e951a658ccd).
 
-> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulo 1). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-3). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 ## Archivo e impresión
 | Atajo | Acción | Dónde se vio |
@@ -25,13 +25,15 @@ En Mac, `Cmd` sustituye a `Ctrl` salvo que se indique otra cosa. Lista completa:
 | `Ctrl + Enter` | Terminar de editar **y quedarse en la misma celda** | Intermediate I M3 |
 | `Ctrl + ;` | Insertar la fecha de hoy como valor **fijo** | Intermediate I M2 |
 | `Ctrl + Shift + ;` (Mac: `Cmd + ;`) | Insertar la hora actual como valor **fijo** | Intermediate I M2 |
-| `Ctrl + Signo más` / `Ctrl + Signo menos` | Insertar / eliminar la fila o columna seleccionada | Essentials M4 |
+| `Ctrl + Shift + +` (Mac: `Control + I`) | Con una fila o columna **entera seleccionada**, insertar una fila o columna nueva (antes se vio como `Ctrl + Signo más`) | Essentials M4, Intermediate II M2 |
+| `Ctrl + -` (Windows y Mac) | Con una fila o columna seleccionada, eliminarla | Essentials M4, Intermediate II M2 |
 | `Ctrl + F` / `Ctrl + H` | Buscar / Reemplazar | Essentials M4 |
 
 ## Fórmulas y nombres
 | Atajo | Acción | Dónde se vio |
 |---|---|---|
-| `F4` (Mac: `Fn + F4` o `Cmd + T`) | Con una referencia en la fórmula: ciclo relativa → `$D$4` → `D$4` → `$D4` → relativa | Essentials M2, Intermediate I M4 |
+| `F4` (Mac: `Fn + F4` o `Cmd + T`) | Justo después de escribir una referencia en la fórmula: una pulsación la hace absoluta; si se sigue pulsando, cicla `$D$4` → `D$4` → `$D4` → relativa `D4` | Essentials M2, Intermediate I M4, Intermediate II M3 |
+| `Tab` | Aceptar la función que Excel sugiere en el autocompletado mientras se escribe | Intermediate II M3 |
 | `` Ctrl + ` `` | Mostrar las fórmulas en vez de sus resultados | Essentials M2 |
 | `Shift + F3` (Mac: `Ctrl + A`) | Asistente de funciones (Formula Builder) | Essentials M2 |
 | `Alt + =` | Autosuma | Essentials M2 |

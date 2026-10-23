@@ -2,8 +2,9 @@
 
 Términos del curso con una definición breve. Ordenados alfabéticamente por el término en inglés, como aparece en el curso.
 
-> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulo 1). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-3). Se amplía al cerrar cada módulo de los cursos siguientes.
 
+- **#N/A**: error que suele aparecer cuando una función de búsqueda no encuentra el valor buscado en la tabla.
 - **Active Cell (celda activa)**: la celda seleccionada en ese momento, con borde grueso.
 - **Argument (argumento)**: cada entrada que recibe una función; se separan con comas y se escriben entre paréntesis.
 - **Automated drop-down List (lista desplegable automática)**: lista desplegable que apunta a una lista de búsqueda guardada en un rango con nombre y una tabla; se actualiza sola cuando cambia esa lista.
@@ -11,8 +12,11 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Cell (celda)**: intersección de una columna y una fila; se nombra con la letra y el número (`B3`).
 - **Chart Area (área del gráfico)**: todo el gráfico, con sus series, ejes, títulos y leyendas. Es la zona desde la que se arrastra el gráfico completo.
 - **Chart Sheet (hoja de gráfico)**: hoja que contiene solo un gráfico. Si el gráfico está junto a otros datos, es un gráfico **incrustado** (*Embedded Chart*).
+- **CHOOSE**: función de búsqueda que toma un valor de una lista según un número; buena para listas pequeñas que no cambian. Las celdas se escriben una por una.
+- **Col_index (índice de columna)**: en `VLOOKUP`, el número de la columna de la tabla que contiene el valor que se debe devolver.
 - **Column / Row (columna / fila)**: las columnas se nombran con letras (16.384 en total) y las filas con números (1.048.576).
 - **Conditional Formatting (formato condicional)**: aplica formato automáticamente cuando se cumple un criterio; se actualiza solo al cambiar los valores.
+- **Conditional Logic (lógica condicional)**: controlar el resultado de una celda según se cumpla o no una condición (`IF`).
 - **Consolidate (consolidar)**: herramienta que combina varios rangos u hojas en un resumen, por posición o por etiquetas.
 - **Criteria Range (rango de criterio)**: el rango de datos donde se evalúa la condición de una función como `COUNTIFS` o `SUMIFS`.
 - **Dashboard (panel)**: pantalla de resumen con gráficos y tablas, a veces interactiva, que da una vista rápida de los datos.
@@ -23,6 +27,7 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Dataset (conjunto de datos)**: conjunto de datos con campos (columnas) que suelen tener distinto formato.
 - **Drop-down List (lista desplegable)**: lista que aparece junto a una celda con validación de tipo Lista, con las opciones permitidas.
 - **Error Message (mensaje de error)**: aviso emergente al escribir en una celda algo que incumple su validación (estilo Detener, Advertencia o Información).
+- **Exact Match VLOOKUP**: búsqueda de un valor con identidad única (ID, número de cuenta); exige `FALSE` como cuarto argumento.
 - **Field / Field List (campo / lista de campos)**: una columna del conjunto de datos / la lista de todas ellas en una tabla dinámica.
 - **Fill Handle (controlador de relleno)**: el cuadrado negro de la esquina inferior derecha de la celda activa; arrastrado, copia o continúa series.
 - **Filter (filtro)**: muestra solo las filas que cumplen un criterio y oculta el resto mientras esté aplicado.
@@ -30,11 +35,17 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Formula Bar (barra de fórmulas)**: muestra el contenido real de la celda; a su izquierda está el Cuadro de nombres (*Name Box*).
 - **Function (función)**: "mini-programa" que se usa dentro de una fórmula (`SUM`, `MID`...). Puede estar **anidada** (*Nested*) dentro de otra, que la usa como argumento.
 - **Gridlines (líneas de cuadrícula)**: líneas que cruzan el área de trazado y ayudan a seguir los valores de los ejes.
+- **INDEX**: devuelve un valor, o la referencia a un valor, desde una tabla o rango según la fila y la columna indicadas. Argumentos: *array*, *row_num*, *col_num*, *area_num*.
 - **Input Message (mensaje de entrada)**: aviso que aparece al hacer clic en una celda con validación, para orientar sobre qué valores son razonables.
 - **Label (etiqueta)**: texto sin formato de número en una celda; no se usa en cálculos.
 - **Legend (leyenda)**: recuadro que indica qué color o símbolo representa cada serie.
 - **Linking (vínculo)**: fórmula que toma un valor de otro libro. El valor es el de la última actualización del vínculo.
+- **Logical Test (prueba lógica)**: lo que se le pide a Excel comprobar para saber si es verdadero o falso; primer argumento de `IF` (ej. `B4>5`).
+- **Logical Operator (operador lógico)**: la relación de la prueba lógica: `=`, `>`, `<`, `>=`, `<=`, `<>`.
+- **Logical Functions (funciones lógicas)**: devuelven VERDADERO/FALSO según se cumplan condiciones; `AND` exige todas, `OR` basta con una, `NOT` invierte.
+- **Logical Value (valor lógico)**: `TRUE` o `FALSE`, sin comillas; distinto del texto `"TRUE"`.
 - **Lookup List (lista de búsqueda)**: lista guardada en algún lugar del libro a la que apunta el Origen de una validación de tipo Lista.
+- **MATCH**: busca un valor en una fila o columna y devuelve su posición; tipo 0 exacta, 1 menor, -1 mayor.
 - **Named Range (rango con nombre)**: nombre memorable para una celda o rango, que funciona como referencia absoluta.
 - **Page Break (salto de página)**: divide la hoja en páginas al imprimir; automático (línea punteada) o manual (línea continua).
 - **Paste Special (pegado especial)**: pega solo parte de lo copiado (valores, formato, validación...), en vez de todo el contenido y características de la celda.
@@ -44,6 +55,7 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Print Area / Print Titles (área / títulos de impresión)**: la sección que se imprime / las filas o columnas que se repiten en cada página impresa.
 - **Quick Access Toolbar (barra de acceso rápido)**: barra sobre la cinta con herramientas personalizables.
 - **Range (rango)**: dos o más celdas. **Adyacente** (`A1:C2`, el `:` significa "hasta") o **no adyacente** (`A1:A2,C1:C2`).
+- **Range VLOOKUP**: búsqueda sin coincidencia exacta; usa el mayor valor menor o igual al buscado y exige datos ordenados. Es el comportamiento por defecto.
 - **Reference (referencia)**: la dirección de una celda. **Relativa** (`D4`, cambia al copiar), **absoluta** (`$D$4`, no cambia) o **mixta** (`$D4`, `D$4`). **3D**: extendida a varias hojas (`Enero:Diciembre!B5`).
 - **Ribbon (cinta de opciones)**: barra principal con pestañas (Inicio, Insertar...) que agrupan los comandos.
 - **Slicer (segmentación de datos)**: botones visuales para filtrar una tabla dinámica, que muestran qué filtros están activos.
@@ -56,5 +68,7 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Table (tabla)**: rango que se extiende solo, con orden, filtro y formato integrados.
 - **Trendline (línea de tendencia)**: línea sobre un gráfico que muestra la tendencia de los datos: lineal, exponencial, logarítmica, polinómica, potencial o media móvil.
 - **Value (valor)**: dato numérico en una celda; solo los valores se pueden usar en cálculos.
+- **VLOOKUP**: función de búsqueda vertical: busca un valor en la primera columna de una tabla y devuelve otro de la misma fila.
+- **Lookup Table / Table Array (tabla de búsqueda)**: la tabla que contiene el valor buscado y el que se quiere recuperar.
 - **Wildcard (comodín)**: `?` sustituye una letra y `*` sustituye varias, en criterios de texto.
 - **Workbook / Worksheet (libro / hoja)**: el archivo de Excel completo / cada una de sus pestañas.

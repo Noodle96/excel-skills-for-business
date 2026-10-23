@@ -2,7 +2,7 @@
 
 Funciones y sintaxis vistas hasta ahora, con el módulo donde se explican. Se usan los nombres en inglés de las funciones, como en el curso. En países donde la coma es separador decimal, los argumentos se separan con `;` en vez de `,`.
 
-> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulo 1). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-3). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 ## Básicas y cálculo
 
@@ -82,11 +82,46 @@ Funciones y sintaxis vistas hasta ahora, con el módulo donde se explican. Se us
 | Validación de datos (Datos > Validación de datos) | Limitar lo que acepta una celda: tipo (decimal, entero, fecha, lista, longitud o personalizada con fórmula), mensaje de entrada y de error. Solo controla lo que se **escribe**; para revisar datos ya existentes, *Rodear con un círculo datos no válidos* | [Intermediate II M1](../03-intermediate-2/notas/modulo-01/01-data-validation.md) |
 | Formato condicional con fórmula | Resaltar celdas según una fórmula VERDADERO/FALSO, incluso comparando contra otra celda (ej. `$N$14`) | [Intermediate II M1](../03-intermediate-2/notas/modulo-01/01-data-validation.md) |
 
+## Lógicas
+
+| Fórmula | Sintaxis | Para qué sirve | Dónde |
+|---|---|---|---|
+| `IF` | `=IF(prueba_lógica, valor_si_verdadero, valor_si_falso)` | Hace una cosa si se cumple la condición y otra si no. `""` deja la celda vacía | [Intermediate II M2](../03-intermediate-2/notas/modulo-02/02-conditional-logic.md) |
+| `AND` | `=AND(prueba1, prueba2, …)` | VERDADERO si **todas** las condiciones se cumplen | [Intermediate II M2](../03-intermediate-2/notas/modulo-02/02-conditional-logic.md) |
+| `OR` | `=OR(prueba1, prueba2, …)` | VERDADERO si **al menos una** se cumple | [Intermediate II M2](../03-intermediate-2/notas/modulo-02/02-conditional-logic.md) |
+| `NOT` | `=IF(NOT(A5=1), B5*5%, 0)` | Invierte una prueba lógica | [Intermediate II M2](../03-intermediate-2/notas/modulo-02/02-conditional-logic.md) |
+| `EXACT` | `=IF(EXACT(A5,"JOHN"), B5*5%, 0)` | Compara dos textos **distinguiendo mayúsculas/minúsculas** (con `=` no se distingue) | [Intermediate II M2](../03-intermediate-2/notas/modulo-02/02-conditional-logic.md) |
+| `IF` anidado | `=IF(B4>=90,"A", IF(B4>=75,"B", IF(B4>=60,"C","D")))` | Varios tramos; las pruebas van de la más restrictiva a la menos | [Intermediate II M2](../03-intermediate-2/notas/modulo-02/02-conditional-logic.md) |
+| `IFERROR` | `=IFERROR(cálculo, valor_si_hay_error)` | Reemplaza cualquier error por un valor o mensaje | [Intermediate II M2](../03-intermediate-2/notas/modulo-02/02-conditional-logic.md) |
+| `IFNA` | `=IFNA(cálculo, valor)` | Igual, pero solo para `#N/A` | [Intermediate II M2](../03-intermediate-2/notas/modulo-02/02-conditional-logic.md) |
+| `IFS`, `SWITCH`, `ISBLANK` | — | Alternativas modernas a los `IF` anidados / prueba de celda vacía (avance) | [Intermediate II M2](../03-intermediate-2/notas/modulo-02/02-conditional-logic.md) |
+
+**Operadores lógicos**: `=` igual (no distingue mayúsculas), `>`, `<`, `>=`, `<=`, `<>` distinto (no distingue mayúsculas).
+
+**Patrones y trampas**:
+- `IF` con `IFERROR` dentro: `=IF(AB2="Call", IFERROR(total/num, "not called yet"), "")`. El `IF` externo decide a quién aplica; el `IFERROR`, qué mostrar si falla.
+- `TRUE` sin comillas es un valor lógico; `"TRUE"` con comillas es texto. Contar: `=COUNTIF(rango,TRUE)`.
+- Un texto es "mayor" que cualquier número en una comparación: `"not called yet" > 7` da VERDADERO; hay que excluirlo antes (`AF2<>"not called yet"`).
+
+## Búsqueda y referencia
+
+| Fórmula | Sintaxis | Para qué sirve | Dónde |
+|---|---|---|---|
+| `CHOOSE` | `=CHOOSE(index_num, valor1, valor2, …)` | Toma un valor de una lista según un número; las celdas van **una por una** (`B4,B5,B6`, no `B4:B6`) | [Intermediate II M3](../03-intermediate-2/notas/modulo-03/03-automating-lookups.md) |
+| `VLOOKUP` por rango | `=VLOOKUP(valor, tabla, col_index)` | Usa el mayor valor **menor o igual** al buscado; la primera columna debe estar **ordenada**. Es el comportamiento por defecto | [Intermediate II M3](../03-intermediate-2/notas/modulo-03/03-automating-lookups.md) |
+| `VLOOKUP` exacto | `=VLOOKUP(valor, tabla, col_index, FALSE)` | Coincidencia exacta, para IDs y datos únicos; da `#N/A` si no lo encuentra | [Intermediate II M3](../03-intermediate-2/notas/modulo-03/03-automating-lookups.md) |
+| `MATCH` | `=MATCH(lookup_value, lookup_array, [match_type])` | Devuelve la **posición**: `0` exacta, `1` menor (datos ascendentes, por defecto), `-1` mayor (datos descendentes) | [Intermediate II M3](../03-intermediate-2/notas/modulo-03/03-automating-lookups.md) |
+| `INDEX` | `=INDEX(array, row_num, [col_num])` | Devuelve el valor que está en una posición dada. Con `0` en fila o columna devuelve una fila o columna entera | [Intermediate II M3](../03-intermediate-2/notas/modulo-03/03-automating-lookups.md) |
+| `INDEX` + `MATCH` | `=INDEX(rango_a_devolver, MATCH(valor, rango_donde_buscar, 0))` | Búsqueda que puede devolver valores a la **izquierda** y no se rompe al insertar columnas | [Intermediate II M3](../03-intermediate-2/notas/modulo-03/03-automating-lookups.md) |
+| `INDEX` + 2 `MATCH` | `=INDEX(matriz, MATCH(fila,…,0), MATCH(columna,…,0))` | Búsqueda en **dos sentidos**; el primer `MATCH` da la fila y el segundo la columna | [Intermediate II M3](../03-intermediate-2/notas/modulo-03/03-automating-lookups.md) |
+
+**Búsqueda por rango vs. `IF` anidados**: `=VLOOKUP(D4,$G$4:$H$7,2)` reemplaza a `=IF(D4<$G$5,$H$4,IF(D4<$G$6,$H$5,IF(D4<$G$7,$H$6,$H$7)))` y es más fácil de revisar y editar.
+
+**Cuidados**: el `table_array` casi siempre va **absoluto** (`$G$4:$H$7`); los rangos de `INDEX` + `MATCH` deben tener el mismo tamaño; `VLOOKUP` por rango con datos sin ordenar da un resultado incorrecto **sin error**.
+
 ## Por completar
 
 Estas categorías se llenan al avanzar por los cursos siguientes:
 
-- **Lógicas** (`IF`, `AND`, `OR`, `IF` anidados, `IFERROR`) — Intermediate II
-- **Búsqueda y referencia** (`VLOOKUP`, `INDEX`, `MATCH`) — Intermediate II
 - **Modelado** (`SUMPRODUCT`, Goal Seek, Solver) — Intermediate II
 - **Financieras** (`FV`, `PV`, `PMT`, `NPV`, `IRR`, depreciación) — Advanced
