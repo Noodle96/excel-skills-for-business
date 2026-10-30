@@ -36,6 +36,6 @@ Al terminar el curso podrás:
 | [x] 02 | Conditional Logic | [notas](notas/modulo-02/) |
 | [x] 03 | Automating Lookups | [notas](notas/modulo-03/) |
 | [x] 04 | Formula Auditing and Protection | [notas](notas/modulo-04/) |
-| [ ] 05 | Data Modelling | [notas](notas/modulo-05/) |
+| [x] 05 | Data Modelling | [notas](notas/modulo-05/) |
 | [ ] 06 | Recording Macros | [notas](notas/modulo-06/) |
 | [ ] 07 | Final Assessment | |
