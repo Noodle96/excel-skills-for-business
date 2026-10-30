@@ -2,7 +2,7 @@
 
 En Mac, `Cmd` sustituye a `Ctrl` salvo que se indique otra cosa. Lista completa: [Microsoft Support (Windows)](https://support.office.com/en-us/article/Excel-keyboard-shortcuts-and-function-keys-for-Windows-1798d9d5-842a-42b8-9c99-9b7213f0040f) · [Microsoft Support (Mac)](https://support.office.com/en-us/article/Keyboard-shortcuts-in-Excel-2016-for-Mac-acf5419e-1f87-444d-962f-4e951a658ccd).
 
-> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-4). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-5; el módulo 5 no trajo atajos nuevos en su Toolbox). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 ## Archivo e impresión
 | Atajo | Acción | Dónde se vio |

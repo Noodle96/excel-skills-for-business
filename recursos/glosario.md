@@ -2,13 +2,16 @@
 
 Términos del curso con una definición breve. Ordenados alfabéticamente por el término en inglés, como aparece en el curso.
 
-> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-4). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-5). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 - **#N/A**: error que suele aparecer cuando una función de búsqueda no encuentra el valor buscado en la tabla.
 - **Active Cell (celda activa)**: la celda seleccionada en ese momento, con borde grueso.
+- **Add-in (complemento)**: función que se agrega a Excel para complementar las existentes. Solver es un complemento y hay que activarlo (Archivo > Opciones > Complementos).
 - **Argument (argumento)**: cada entrada que recibe una función; se separan con comas y se escriben entre paréntesis.
 - **Automated drop-down List (lista desplegable automática)**: lista desplegable que apunta a una lista de búsqueda guardada en un rango con nombre y una tabla; se actualiza sola cuando cambia esa lista.
 - **Axes X & Y (ejes)**: el eje X va abajo y suele llevar las categorías; el eje Y va a un lado y lleva los valores. En los gráficos de barras están invertidos.
+- **Base Case Scenario (escenario base)**: el escenario en que todas las celdas variables tienen los valores esperados al inicio del análisis.
+- **Best (Worst) Case Scenario (mejor o peor caso)**: el escenario en que las celdas variables tienen los valores más (menos) favorables desde nuestra perspectiva.
 - **Cell (celda)**: intersección de una columna y una fila; se nombra con la letra y el número (`B3`).
 - **Chart Area (área del gráfico)**: todo el gráfico, con sus series, ejes, títulos y leyendas. Es la zona desde la que se arrastra el gráfico completo.
 - **Chart Sheet (hoja de gráfico)**: hoja que contiene solo un gráfico. Si el gráfico está junto a otros datos, es un gráfico **incrustado** (*Embedded Chart*).
@@ -19,11 +22,13 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Conditional Formatting (formato condicional)**: aplica formato automáticamente cuando se cumple un criterio; se actualiza solo al cambiar los valores.
 - **Conditional Logic (lógica condicional)**: controlar el resultado de una celda según se cumpla o no una condición (`IF`).
 - **Consolidate (consolidar)**: herramienta que combina varios rangos u hojas en un resumen, por posición o por etiquetas.
+- **Constraint (restricción)**: límite al valor de una celda concreta; en Solver, una condición que la solución debe cumplir (`<=`, `=`, `>=`, entero, binario).
 - **Criteria Range (rango de criterio)**: el rango de datos donde se evalúa la condición de una función como `COUNTIFS` o `SUMIFS`.
 - **Dashboard (panel)**: pantalla de resumen con gráficos y tablas, a veces interactiva, que da una vista rápida de los datos.
 - **Data Label (etiqueta de datos)**: información adicional de un punto de datos, normalmente su valor.
 - **Data Point / Data Series (punto / serie de datos)**: un valor de una celda representado en el gráfico / un conjunto de valores relacionados representados juntos.
 - **Data Source (origen de datos)**: de dónde vienen los datos de una tabla dinámica.
+- **Data Table (tabla de datos)**: herramienta de What-If Analysis que calcula de una vez el resultado de un modelo para muchos valores de una o dos entradas. Los valores de la fila superior usan la *Row input cell* y los de la columna izquierda, la *Column input cell*.
 - **Data Validation (validación de datos)**: método para reducir errores limitando lo que Excel acepta en una celda a los resultados razonables (lista, número, fecha, longitud o una fórmula personalizada). Solo controla lo que se escribe, no lo que se pega ni los datos ya existentes.
 - **Dataset (conjunto de datos)**: conjunto de datos con campos (columnas) que suelen tener distinto formato.
 - **Dependent Cell (celda dependiente)**: celda cuya fórmula se refiere a la celda activa (si `D5` es `=A1`, `D5` depende de `A1`).
@@ -38,6 +43,7 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Formula Auditing (auditoría de fórmulas)**: grupo de la pestaña Fórmulas con herramientas para identificar y corregir errores en las fórmulas.
 - **Formula Bar (barra de fórmulas)**: muestra el contenido real de la celda; a su izquierda está el Cuadro de nombres (*Name Box*).
 - **Function (función)**: "mini-programa" que se usa dentro de una fórmula (`SUM`, `MID`...). Puede estar **anidada** (*Nested*) dentro de otra, que la usa como argumento.
+- **Goal Seek (buscar objetivo)**: herramienta de What-If Analysis que cambia **una** celda de entrada hasta que una fórmula alcance un valor exacto. Es iterativo y aproximado.
 - **Gridlines (líneas de cuadrícula)**: líneas que cruzan el área de trazado y ayudan a seguir los valores de los ejes.
 - **INDEX**: devuelve un valor, o la referencia a un valor, desde una tabla o rango según la fila y la columna indicadas. Argumentos: *array*, *row_num*, *col_num*, *area_num*.
 - **Input Message (mensaje de entrada)**: aviso que aparece al hacer clic en una celda con validación, para orientar sobre qué valores son razonables.
@@ -66,7 +72,9 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Range VLOOKUP**: búsqueda sin coincidencia exacta; usa el mayor valor menor o igual al buscado y exige datos ordenados. Es el comportamiento por defecto.
 - **Reference (referencia)**: la dirección de una celda. **Relativa** (`D4`, cambia al copiar), **absoluta** (`$D$4`, no cambia) o **mixta** (`$D4`, `D$4`). **3D**: extendida a varias hojas (`Enero:Diciembre!B5`).
 - **Ribbon (cinta de opciones)**: barra principal con pestañas (Inicio, Insertar...) que agrupan los comandos.
+- **Scenario (escenario)**: conjunto concreto de valores dados a las celdas variables, con nombre. **Scenario Manager** (administrador de escenarios) los guarda y los compara; su **Scenario Summary** es una hoja estática con una columna por escenario.
 - **Slicer (segmentación de datos)**: botones visuales para filtrar una tabla dinámica, que muestran qué filtros están activos.
+- **Solver**: complemento de optimización que maximiza, minimiza o lleva a un valor una celda objetivo cambiando varias celdas, con restricciones. Motores: Simplex LP (lineal), GRG Nonlinear (no lineal suave) y Evolutionary (modelos con saltos).
 - **Sorting (ordenar)**: organiza los datos en un orden, por uno o varios niveles.
 - **Sparkline (minigráfico)**: gráfico pequeño dentro de una sola celda.
 - **Specified Range (rango especificado)**: rango dado por referencias de celda, por ejemplo `B4:B9`.
@@ -74,11 +82,15 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Stored Value (valor almacenado)**: el valor real que Excel tiene asignado a una celda, con la máxima precisión.
 - **Structure (estructura)**: cómo están organizados los datos (cantidad y orden de filas y columnas); clave para decidir cómo consolidar.
 - **Structured Reference (referencia estructurada)**: referencia a una tabla por nombre (`Ventas[Importe]`); se comporta como relativa.
+- **SUMPRODUCT**: función que multiplica rangos o matrices entre sí y después suma los productos; sirve para promedios ponderados y para contar con condiciones.
 - **Table (tabla)**: rango que se extiende solo, con orden, filtro y formato integrados.
+- **Target Cell (celda objetivo)**: celda que se fija a un valor concreto (o se maximiza/minimiza) cambiando las celdas variables.
 - **Trendline (línea de tendencia)**: línea sobre un gráfico que muestra la tendencia de los datos: lineal, exponencial, logarítmica, polinómica, potencial o media móvil.
 - **Value (valor)**: dato numérico en una celda; solo los valores se pueden usar en cálculos.
+- **Variable Cell (celda variable)**: celda con un valor que se permite cambiar al inicio del análisis (la que modifican Goal Seek, Solver o un escenario).
 - **VLOOKUP**: función de búsqueda vertical: busca un valor en la primera columna de una tabla y devuelve otro de la misma fila.
 - **Lookup Table / Table Array (tabla de búsqueda)**: la tabla que contiene el valor buscado y el que se quiere recuperar.
 - **Watch Window (ventana de inspección)**: barra de herramientas que permite vigilar celdas y sus fórmulas mientras uno navega por el libro.
+- **What-If Analysis (análisis de hipótesis)**: grupo de herramientas (Data Table, Goal Seek, Scenario Manager) que permite probar distintos valores en las fórmulas e investigar los resultados.
 - **Wildcard (comodín)**: `?` sustituye una letra y `*` sustituye varias, en criterios de texto.
 - **Workbook / Worksheet (libro / hoja)**: el archivo de Excel completo / cada una de sus pestañas.

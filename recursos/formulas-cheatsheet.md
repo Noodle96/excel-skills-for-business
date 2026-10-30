@@ -2,7 +2,7 @@
 
 Funciones y sintaxis vistas hasta ahora, con el módulo donde se explican. Se usan los nombres en inglés de las funciones, como en el curso. En países donde la coma es separador decimal, los argumentos se separan con `;` en vez de `,`.
 
-> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-4). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-5). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 ## Básicas y cálculo
 
@@ -137,9 +137,25 @@ Funciones y sintaxis vistas hasta ahora, con el módulo donde se explican. Se us
 - **Opciones de cálculo**: Automático o Manual; `F9` recalcula todos los libros y `Shift + F9` solo la hoja. **Referencia circular**: una fórmula que se refiere a su propia celda; se resuelve con el cálculo iterativo o corrigiendo la fórmula.
 - **Protección**: Revisar > Proteger hoja / Proteger libro; solo bloquea las celdas *Bloqueadas* cuando la hoja está protegida, y la contraseña no se puede recuperar.
 
+## Modelado y análisis de hipótesis
+
+| Fórmula | Sintaxis | Para qué sirve | Dónde |
+|---|---|---|---|
+| `SUMPRODUCT` | `=SUMPRODUCT(array1, [array2], …)` | Multiplica los rangos celda a celda y suma los productos: promedio ponderado (`=SUMPRODUCT(horas, pesos)/SUM(pesos)`). Los rangos deben tener la **misma forma** | [Intermediate II M5](../03-intermediate-2/notas/modulo-05/05-data-modelling.md) |
+| `SUMPRODUCT` como contador | `=SUMPRODUCT(1*(E6:E11>=100))` | Cuenta las filas que cumplen una condición (el `1*` vuelve VERDADERO/FALSO en 1/0); equivale a `COUNTIFS` | [Intermediate II M5](../03-intermediate-2/notas/modulo-05/05-data-modelling.md) |
+| Recargo / descuento porcentual | `=costo*(1+tasa)` · `=costo*(1-tasa)` | Aplica un bono, un aumento o un descuento a un valor base | [Intermediate II M5](../03-intermediate-2/notas/modulo-05/05-data-modelling.md) |
+
+| Herramienta (Datos > Análisis de hipótesis) | Cuándo usarla | Dónde |
+|---|---|---|
+| **Data Table** (Tabla de datos) | Resultado de un modelo para una lista de valores de **1 o 2 entradas**. Los valores en la **fila superior** → *Row input cell*; en la **columna izquierda** → *Column input cell*. La fórmula va en la esquina (dos variables) o una fila arriba y una columna a la derecha (una variable). Si se invierten las celdas no hay error, solo números incorrectos | [Intermediate II M5](../03-intermediate-2/notas/modulo-05/05-data-modelling.md) |
+| **Goal Seek** (Buscar objetivo) | Qué valor debe tener **una** celda de entrada para que el resultado sea **exactamente** X. Tres campos: *Set cell* (fórmula), *To value* (valor fijo), *By changing cell* (valor, no fórmula). Iterativo; con una curva puede haber **más de una solución** | [Intermediate II M5](../03-intermediate-2/notas/modulo-05/05-data-modelling.md) |
+| **Scenario Manager** (Administrador de escenarios) | Guardar conjuntos con nombre de valores para **varias** entradas y compararlos con un *Scenario Summary* (hoja estática). Típico: caso base, mejor y peor | [Intermediate II M5](../03-intermediate-2/notas/modulo-05/05-data-modelling.md) |
+| **Solver** (complemento: Archivo > Opciones > Complementos) | **Maximizar, minimizar o llevar a un valor** una celda objetivo cambiando **varias** celdas, con restricciones. Motores: **Simplex LP** (modelos lineales, óptimo global), **GRG Nonlinear** (no lineal suave, óptimo local), **Evolutionary** (modelos con saltos: `IF`, búsquedas) | [Intermediate II M5](../03-intermediate-2/notas/modulo-05/05-data-modelling.md) |
+
+**Goal Seek vs Solver**: una celda y un valor exacto → Goal Seek; varias celdas, restricciones o maximizar/minimizar → Solver.
+
 ## Por completar
 
 Estas categorías se llenan al avanzar por los cursos siguientes:
 
-- **Modelado** (`SUMPRODUCT`, Goal Seek, Solver) — Intermediate II
 - **Financieras** (`FV`, `PV`, `PMT`, `NPV`, `IRR`, depreciación) — Advanced
