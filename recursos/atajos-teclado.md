@@ -2,7 +2,7 @@
 
 En Mac, `Cmd` sustituye a `Ctrl` salvo que se indique otra cosa. Lista completa: [Microsoft Support (Windows)](https://support.office.com/en-us/article/Excel-keyboard-shortcuts-and-function-keys-for-Windows-1798d9d5-842a-42b8-9c99-9b7213f0040f) · [Microsoft Support (Mac)](https://support.office.com/en-us/article/Keyboard-shortcuts-in-Excel-2016-for-Mac-acf5419e-1f87-444d-962f-4e951a658ccd).
 
-> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-3). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-4). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 ## Archivo e impresión
 | Atajo | Acción | Dónde se vio |
@@ -37,6 +37,11 @@ En Mac, `Cmd` sustituye a `Ctrl` salvo que se indique otra cosa. Lista completa:
 | `` Ctrl + ` `` | Mostrar las fórmulas en vez de sus resultados | Essentials M2 |
 | `Shift + F3` (Mac: `Ctrl + A`) | Asistente de funciones (Formula Builder) | Essentials M2 |
 | `Alt + =` | Autosuma | Essentials M2 |
+| `F2` | Editar la fórmula mostrando los **precedentes de cada argumento codificados por colores** | Intermediate II M4 |
+| `F9` | Recalcular las fórmulas de **todos los libros abiertos** | Intermediate II M4 |
+| `Shift + F9` | Recalcular las fórmulas solo de la **hoja activa** | Intermediate II M4 |
+| `Ctrl + [` | Ir a las celdas **precedentes** de la celda activa | Intermediate II M4 |
+| `Ctrl + ]` | Ir a las celdas **dependientes** de la celda activa | Intermediate II M4 |
 | `Ctrl` + clic (dentro de una función) | Inserta la coma entre referencias, ej. `CONCAT(A2,D2,G2)` | Intermediate I M2 |
 | `F3` | Pegar nombre (lista de rangos con nombre) | Intermediate I M3 |
 | `Ctrl + F3` | Administrador de nombres (solo Windows) | Intermediate I M3 |

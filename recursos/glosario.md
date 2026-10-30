@@ -2,7 +2,7 @@
 
 Términos del curso con una definición breve. Ordenados alfabéticamente por el término en inglés, como aparece en el curso.
 
-> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-3). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-4). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 - **#N/A**: error que suele aparecer cuando una función de búsqueda no encuentra el valor buscado en la tabla.
 - **Active Cell (celda activa)**: la celda seleccionada en ese momento, con borde grueso.
@@ -14,6 +14,7 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Chart Sheet (hoja de gráfico)**: hoja que contiene solo un gráfico. Si el gráfico está junto a otros datos, es un gráfico **incrustado** (*Embedded Chart*).
 - **CHOOSE**: función de búsqueda que toma un valor de una lista según un número; buena para listas pequeñas que no cambian. Las celdas se escriben una por una.
 - **Col_index (índice de columna)**: en `VLOOKUP`, el número de la columna de la tabla que contiene el valor que se debe devolver.
+- **Circular Reference (referencia circular)**: error que ocurre cuando una fórmula se refiere a la celda que la contiene (ej. `=A1+A2` escrito en `A1`). Excel avisa al abrir el libro, en Comprobación de errores y en la barra de estado.
 - **Column / Row (columna / fila)**: las columnas se nombran con letras (16.384 en total) y las filas con números (1.048.576).
 - **Conditional Formatting (formato condicional)**: aplica formato automáticamente cuando se cumple un criterio; se actualiza solo al cambiar los valores.
 - **Conditional Logic (lógica condicional)**: controlar el resultado de una celda según se cumpla o no una condición (`IF`).
@@ -25,6 +26,8 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Data Source (origen de datos)**: de dónde vienen los datos de una tabla dinámica.
 - **Data Validation (validación de datos)**: método para reducir errores limitando lo que Excel acepta en una celda a los resultados razonables (lista, número, fecha, longitud o una fórmula personalizada). Solo controla lo que se escribe, no lo que se pega ni los datos ya existentes.
 - **Dataset (conjunto de datos)**: conjunto de datos con campos (columnas) que suelen tener distinto formato.
+- **Dependent Cell (celda dependiente)**: celda cuya fórmula se refiere a la celda activa (si `D5` es `=A1`, `D5` depende de `A1`).
+- **Displayed Value (valor mostrado)**: el valor de una celda que ve el usuario, según su formato.
 - **Drop-down List (lista desplegable)**: lista que aparece junto a una celda con validación de tipo Lista, con las opciones permitidas.
 - **Error Message (mensaje de error)**: aviso emergente al escribir en una celda algo que incumple su validación (estilo Detener, Advertencia o Información).
 - **Exact Match VLOOKUP**: búsqueda de un valor con identidad única (ID, número de cuenta); exige `FALSE` como cuarto argumento.
@@ -32,11 +35,13 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Fill Handle (controlador de relleno)**: el cuadrado negro de la esquina inferior derecha de la celda activa; arrastrado, copia o continúa series.
 - **Filter (filtro)**: muestra solo las filas que cumplen un criterio y oculta el resto mientras esté aplicado.
 - **Formula (fórmula)**: cálculo que se escribe en una celda y empieza siempre con `=`.
+- **Formula Auditing (auditoría de fórmulas)**: grupo de la pestaña Fórmulas con herramientas para identificar y corregir errores en las fórmulas.
 - **Formula Bar (barra de fórmulas)**: muestra el contenido real de la celda; a su izquierda está el Cuadro de nombres (*Name Box*).
 - **Function (función)**: "mini-programa" que se usa dentro de una fórmula (`SUM`, `MID`...). Puede estar **anidada** (*Nested*) dentro de otra, que la usa como argumento.
 - **Gridlines (líneas de cuadrícula)**: líneas que cruzan el área de trazado y ayudan a seguir los valores de los ejes.
 - **INDEX**: devuelve un valor, o la referencia a un valor, desde una tabla o rango según la fila y la columna indicadas. Argumentos: *array*, *row_num*, *col_num*, *area_num*.
 - **Input Message (mensaje de entrada)**: aviso que aparece al hacer clic en una celda con validación, para orientar sobre qué valores son razonables.
+- **Iteration (iteración)**: repetición de un cálculo por parte de Excel; clave para resolver referencias circulares con el cálculo iterativo.
 - **Label (etiqueta)**: texto sin formato de número en una celda; no se usa en cálculos.
 - **Legend (leyenda)**: recuadro que indica qué color o símbolo representa cada serie.
 - **Linking (vínculo)**: fórmula que toma un valor de otro libro. El valor es el de la última actualización del vínculo.
@@ -52,7 +57,10 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **PivotChart (gráfico dinámico)**: gráfico basado en una tabla dinámica, con su misma capacidad de resumen y filtro.
 - **PivotTable (tabla dinámica)**: forma de resumir datos, parecida a una tabulación cruzada.
 - **Plot Area (área de trazado)**: la parte del gráfico delimitada por los ejes.
+- **Precedent Cell (celda precedente)**: celda a la que se refiere la fórmula de la celda activa (si `D5` es `=A1`, `A1` es precedente de `D5`).
+- **Precision (precisión)**: nivel de exactitud de un cálculo; el valor almacenado tiene la máxima, la del valor mostrado se puede cambiar.
 - **Print Area / Print Titles (área / títulos de impresión)**: la sección que se imprime / las filas o columnas que se repiten en cada página impresa.
+- **Protection (protección)**: función de privacidad y seguridad para restringir la modificación o el acceso a un archivo o una hoja.
 - **Quick Access Toolbar (barra de acceso rápido)**: barra sobre la cinta con herramientas personalizables.
 - **Range (rango)**: dos o más celdas. **Adyacente** (`A1:C2`, el `:` significa "hasta") o **no adyacente** (`A1:A2,C1:C2`).
 - **Range VLOOKUP**: búsqueda sin coincidencia exacta; usa el mayor valor menor o igual al buscado y exige datos ordenados. Es el comportamiento por defecto.
@@ -63,6 +71,7 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Sparkline (minigráfico)**: gráfico pequeño dentro de una sola celda.
 - **Specified Range (rango especificado)**: rango dado por referencias de celda, por ejemplo `B4:B9`.
 - **Status Bar (barra de estado)**: debajo de la hoja; zoom, vistas y cálculos rápidos de la selección.
+- **Stored Value (valor almacenado)**: el valor real que Excel tiene asignado a una celda, con la máxima precisión.
 - **Structure (estructura)**: cómo están organizados los datos (cantidad y orden de filas y columnas); clave para decidir cómo consolidar.
 - **Structured Reference (referencia estructurada)**: referencia a una tabla por nombre (`Ventas[Importe]`); se comporta como relativa.
 - **Table (tabla)**: rango que se extiende solo, con orden, filtro y formato integrados.
@@ -70,5 +79,6 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Value (valor)**: dato numérico en una celda; solo los valores se pueden usar en cálculos.
 - **VLOOKUP**: función de búsqueda vertical: busca un valor en la primera columna de una tabla y devuelve otro de la misma fila.
 - **Lookup Table / Table Array (tabla de búsqueda)**: la tabla que contiene el valor buscado y el que se quiere recuperar.
+- **Watch Window (ventana de inspección)**: barra de herramientas que permite vigilar celdas y sus fórmulas mientras uno navega por el libro.
 - **Wildcard (comodín)**: `?` sustituye una letra y `*` sustituye varias, en criterios de texto.
 - **Workbook / Worksheet (libro / hoja)**: el archivo de Excel completo / cada una de sus pestañas.

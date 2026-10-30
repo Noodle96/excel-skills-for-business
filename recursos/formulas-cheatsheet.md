@@ -2,7 +2,7 @@
 
 Funciones y sintaxis vistas hasta ahora, con el módulo donde se explican. Se usan los nombres en inglés de las funciones, como en el curso. En países donde la coma es separador decimal, los argumentos se separan con `;` en vez de `,`.
 
-> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-3). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-4). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 ## Básicas y cálculo
 
@@ -118,6 +118,24 @@ Funciones y sintaxis vistas hasta ahora, con el módulo donde se explican. Se us
 **Búsqueda por rango vs. `IF` anidados**: `=VLOOKUP(D4,$G$4:$H$7,2)` reemplaza a `=IF(D4<$G$5,$H$4,IF(D4<$G$6,$H$5,IF(D4<$G$7,$H$6,$H$7)))` y es más fácil de revisar y editar.
 
 **Cuidados**: el `table_array` casi siempre va **absoluto** (`$G$4:$H$7`); los rangos de `INDEX` + `MATCH` deben tener el mismo tamaño; `VLOOKUP` por rango con datos sin ordenar da un resultado incorrecto **sin error**.
+
+## Errores y auditoría de fórmulas
+
+| Error | Significado | Dónde |
+|---|---|---|
+| `#DIV/0!` | División entre cero o entre una celda vacía | [Intermediate II M4](../03-intermediate-2/notas/modulo-04/04-formula-auditing-protection.md) |
+| `#NAME?` | Texto que Excel no reconoce (nombre de función mal escrito) | [Intermediate II M4](../03-intermediate-2/notas/modulo-04/04-formula-auditing-protection.md) |
+| `#VALUE!` | Un valor de la fórmula es del tipo de dato equivocado | [Intermediate II M4](../03-intermediate-2/notas/modulo-04/04-formula-auditing-protection.md) |
+| `#N/A` | Una función de búsqueda no encontró el valor | [Intermediate II M3](../03-intermediate-2/notas/modulo-03/03-automating-lookups.md) |
+| `#REF!` | La fórmula apunta a una celda que fue borrada | [Intermediate II M4](../03-intermediate-2/notas/modulo-04/04-formula-auditing-protection.md) |
+| `#####` | No es un error: la columna es demasiado estrecha para mostrar el número | [Intermediate II M4](../03-intermediate-2/notas/modulo-04/04-formula-auditing-protection.md) |
+
+**Herramientas de Formulas > Auditoría de fórmulas** ([Intermediate II M4](../03-intermediate-2/notas/modulo-04/04-formula-auditing-protection.md)):
+- **Rastrear precedentes / dependientes**: flechas desde o hacia la celda activa (`Ctrl + [` y `Ctrl + ]` para ir a ellas); doble clic en una flecha selecciona el otro extremo, y las flechas desaparecen al editar.
+- **Evaluar fórmula**: recorre una fórmula paso a paso; las funciones volátiles (`RAND`, `INDEX`, `OFFSET`, `INDIRECT`, `NOW`, `TODAY`, `RANDBETWEEN`…) pueden dar resultados distintos de la celda.
+- **Comprobación de errores**, **Mostrar fórmulas** (`` Ctrl + ` ``) y **Ventana de inspección**.
+- **Opciones de cálculo**: Automático o Manual; `F9` recalcula todos los libros y `Shift + F9` solo la hoja. **Referencia circular**: una fórmula que se refiere a su propia celda; se resuelve con el cálculo iterativo o corrigiendo la fórmula.
+- **Protección**: Revisar > Proteger hoja / Proteger libro; solo bloquea las celdas *Bloqueadas* cuando la hoja está protegida, y la contraseña no se puede recuperar.
 
 ## Por completar
 
