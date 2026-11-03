@@ -53,8 +53,8 @@ Especialización de 4 cursos. Docentes: Nicky Bull, Dr. Prashan S. M. Karunaratn
 | 1 | Spreadsheet Design and Documentation — principios de diseño, cálculos, formato, documentación, navegación | 5h |
 | 2 | Advanced Formula Techniques — tablas estructuradas, funciones de ordenamiento, array formulas (TRANSPOSE) | 4h |
 | 3 | Data Cleaning and Preparation — espacios en blanco, reparar fechas, espacios no deseados, caracteres extraños | 5h |
-| 4 | Financial Functions and Dates — EOMONTH, EDATE, WORKDAY.INTL, FV, PV, PMT, NPV, IRR, depreciación (SLN, SYD, DDB) | 3h |
-| 5 | Advanced Lookup Functions — INDIRECT, ADDRESS, OFFSET, INDEX | 4h |
+| 4 | Financial Functions and Working with Dates — EOMONTH, EDATE, WORKDAY.INTL, FV, PV, PMT, calendario de préstamo, NPV, IRR, depreciación (SLN, SYD, DDB) | 3h |
+| 5 | Advanced Lookup Functions — INDIRECT, ADDRESS, OFFSET (la introducción menciona también INDEX) | 4h |
 | 6 | Building Professional Dashboards — diseño, visualización, modelos de datos, interactividad | 2h |
 | 7 | Advanced Excel Final Assessment | 1h |
 
@@ -62,9 +62,9 @@ Especialización de 4 cursos. Docentes: Nicky Bull, Dr. Prashan S. M. Karunaratn
 
 ## Progreso
 
-- [ ] Curso 1: Essentials
-- [ ] Curso 2: Intermediate I
-- [ ] Curso 3: Intermediate II
+- [x] Curso 1: Essentials
+- [x] Curso 2: Intermediate I
+- [x] Curso 3: Intermediate II
 - [ ] Curso 4: Advanced
 
 ## Fuentes
