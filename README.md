@@ -8,7 +8,7 @@ Ver el temario completo en [SYLLABUS.md](SYLLABUS.md).
 
 - [x] [01 · Essentials](01-essentials/README.md)
 - [x] [02 · Intermediate I](02-intermediate-1/README.md)
-- [ ] [03 · Intermediate II](03-intermediate-2/README.md)
+- [x] [03 · Intermediate II](03-intermediate-2/README.md)
 - [ ] [04 · Advanced](04-advanced/README.md)
 
 ## Cómo está organizado
