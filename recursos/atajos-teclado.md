@@ -2,7 +2,7 @@
 
 En Mac, `Cmd` sustituye a `Ctrl` salvo que se indique otra cosa. Lista completa: [Microsoft Support (Windows)](https://support.office.com/en-us/article/Excel-keyboard-shortcuts-and-function-keys-for-Windows-1798d9d5-842a-42b8-9c99-9b7213f0040f) · [Microsoft Support (Mac)](https://support.office.com/en-us/article/Keyboard-shortcuts-in-Excel-2016-for-Mac-acf5419e-1f87-444d-962f-4e951a658ccd).
 
-> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-5; el módulo 5 no trajo atajos nuevos en su Toolbox). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6; el módulo 5 no trajo atajos nuevos en su Toolbox). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 ## Archivo e impresión
 | Atajo | Acción | Dónde se vio |
@@ -62,7 +62,7 @@ En Mac, `Cmd` sustituye a `Ctrl` salvo que se indique otra cosa. Lista completa:
 |---|---|---|
 | `Re Pág` / `Av Pág` | Subir / bajar una página | Essentials M1 |
 | `Ctrl + Flecha` | Saltar al borde del bloque de datos | Essentials M1 |
-| `Ctrl + Inicio` / `Ctrl + Fin` | Ir a `A1` / a la última celda usada (sin tecla Inicio: `Ctrl + Fn + Inicio`) | Essentials M1 |
+| `Ctrl + Inicio` / `Ctrl + Fin` | Ir a `A1` / a la última celda usada (sin tecla Inicio: `Ctrl + Fn + Inicio`) | Essentials M1, Intermediate II M6 |
 | `F5` o `Ctrl + G` | Ir a... (celda, rango o rango con nombre) | Essentials M1 |
 | `Ctrl + Rueda del mouse` | Zoom | Essentials M1 |
 | `Ctrl + Av Pág` / `Ctrl + Re Pág` (Mac: `Option + →` / `Option + ←`) | Hoja siguiente / hoja anterior | Essentials M2, Intermediate I M1 |
@@ -103,3 +103,13 @@ En Mac, `Cmd` sustituye a `Ctrl` salvo que se indique otra cosa. Lista completa:
 | `Alt + F1` | Insertar un gráfico incrustado en la hoja actual | Essentials M6 |
 | `Ctrl + D` | Duplicar un gráfico | Intermediate I M4 |
 | `Ctrl + Shift + >` | Aumentar el tamaño de fuente de un elemento del gráfico (solo Windows) | Intermediate I M4 |
+
+## Macros
+| Atajo | Acción | Dónde se vio |
+|---|---|---|
+| `Alt + F8` | Abrir el cuadro de diálogo de macros (ejecutar, editar, eliminar; en *Opciones* se asigna el atajo) | Intermediate II M6 |
+| `Alt + F11` | Alternar entre la hoja de Excel y la ventana de código (editor de VBA) | Intermediate II M6 |
+| `Alt + T + M + R` | **Grabar** una macro; también **detiene** la grabación | Intermediate II M6 |
+| `Shift + F10` (`Fn + Shift + F10`) | Mostrar el menú contextual | Intermediate II M6 |
+| `F8` / `F5` (en el editor de VBA) | Ejecutar la macro línea a línea / completa | Intermediate II M6 (general) |
+| `Ctrl + Shift + letra` | Forma recomendada de asignar un atajo a una macro, para no anular un comando de Excel | Intermediate II M6 |

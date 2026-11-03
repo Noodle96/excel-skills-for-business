@@ -2,7 +2,7 @@
 
 Términos del curso con una definición breve. Ordenados alfabéticamente por el término en inglés, como aparece en el curso.
 
-> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-5). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 - **#N/A**: error que suele aparecer cuando una función de búsqueda no encuentra el valor buscado en la tabla.
 - **Active Cell (celda activa)**: la celda seleccionada en ese momento, con borde grueso.
@@ -16,21 +16,27 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Chart Area (área del gráfico)**: todo el gráfico, con sus series, ejes, títulos y leyendas. Es la zona desde la que se arrastra el gráfico completo.
 - **Chart Sheet (hoja de gráfico)**: hoja que contiene solo un gráfico. Si el gráfico está junto a otros datos, es un gráfico **incrustado** (*Embedded Chart*).
 - **CHOOSE**: función de búsqueda que toma un valor de una lista según un número; buena para listas pequeñas que no cambian. Las celdas se escriben una por una.
+- **Code window (ventana de código)**: ventana del editor de VBA que contiene el código en que se basan las macros (igual que el VBE).
 - **Col_index (índice de columna)**: en `VLOOKUP`, el número de la columna de la tabla que contiene el valor que se debe devolver.
 - **Circular Reference (referencia circular)**: error que ocurre cuando una fórmula se refiere a la celda que la contiene (ej. `=A1+A2` escrito en `A1`). Excel avisa al abrir el libro, en Comprobación de errores y en la barra de estado.
 - **Column / Row (columna / fila)**: las columnas se nombran con letras (16.384 en total) y las filas con números (1.048.576).
+- **Comment (comentario)**: texto descriptivo del código de una macro que Excel ignora al ejecutarla; cada comentario empieza con un apóstrofe (`'`).
+- **Compiler (compilador)**: convierte el lenguaje de alto nivel (el VBA que se escribe) en lenguaje de bajo nivel, que es el que entiende el equipo.
 - **Conditional Formatting (formato condicional)**: aplica formato automáticamente cuando se cumple un criterio; se actualiza solo al cambiar los valores.
 - **Conditional Logic (lógica condicional)**: controlar el resultado de una celda según se cumpla o no una condición (`IF`).
 - **Consolidate (consolidar)**: herramienta que combina varios rangos u hojas en un resumen, por posición o por etiquetas.
 - **Constraint (restricción)**: límite al valor de una celda concreta; en Solver, una condición que la solución debe cumplir (`<=`, `=`, `>=`, entero, binario).
 - **Criteria Range (rango de criterio)**: el rango de datos donde se evalúa la condición de una función como `COUNTIFS` o `SUMIFS`.
 - **Dashboard (panel)**: pantalla de resumen con gráficos y tablas, a veces interactiva, que da una vista rápida de los datos.
+- **Data import (importación de datos)**: permite a Excel leer datos que pueden venir de un archivo de texto (por ejemplo, los datos de BPay).
 - **Data Label (etiqueta de datos)**: información adicional de un punto de datos, normalmente su valor.
 - **Data Point / Data Series (punto / serie de datos)**: un valor de una celda representado en el gráfico / un conjunto de valores relacionados representados juntos.
 - **Data Source (origen de datos)**: de dónde vienen los datos de una tabla dinámica.
 - **Data Table (tabla de datos)**: herramienta de What-If Analysis que calcula de una vez el resultado de un modelo para muchos valores de una o dos entradas. Los valores de la fila superior usan la *Row input cell* y los de la columna izquierda, la *Column input cell*.
 - **Data Validation (validación de datos)**: método para reducir errores limitando lo que Excel acepta en una celda a los resultados razonables (lista, número, fecha, longitud o una fórmula personalizada). Solo controla lo que se escribe, no lo que se pega ni los datos ya existentes.
 - **Dataset (conjunto de datos)**: conjunto de datos con campos (columnas) que suelen tener distinto formato.
+- **Debug (depurar)**: identificar y eliminar errores del código VBA de una macro.
+- **Delimited (delimitado)**: datos separados por caracteres de un tipo concreto (comas, punto y coma, etc.).
 - **Dependent Cell (celda dependiente)**: celda cuya fórmula se refiere a la celda activa (si `D5` es `=A1`, `D5` depende de `A1`).
 - **Displayed Value (valor mostrado)**: el valor de una celda que ve el usuario, según su formato.
 - **Drop-down List (lista desplegable)**: lista que aparece junto a una celda con validación de tipo Lista, con las opciones permitidas.
@@ -56,7 +62,9 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Logical Functions (funciones lógicas)**: devuelven VERDADERO/FALSO según se cumplan condiciones; `AND` exige todas, `OR` basta con una, `NOT` invierte.
 - **Logical Value (valor lógico)**: `TRUE` o `FALSE`, sin comillas; distinto del texto `"TRUE"`.
 - **Lookup List (lista de búsqueda)**: lista guardada en algún lugar del libro a la que apunta el Origen de una validación de tipo Lista.
+- **Macro**: conjunto de instrucciones de programación que se pueden aplicar en Excel para automatizar tareas repetitivas. **Macro Dialog Box**: ventana (`Alt + F8`) para crearlas, editarlas, eliminarlas o ejecutarlas. **Macro Recorder**: registra en VBA las acciones que se hacen en Excel. **Macro-Enabled**: libro guardado con sus macros (`.xlsm`).
 - **MATCH**: busca un valor en una fila o columna y devuelve su posición; tipo 0 exacta, 1 menor, -1 mayor.
+- **Module (módulo)**: unidad de almacenamiento de un conjunto de macros.
 - **Named Range (rango con nombre)**: nombre memorable para una celda o rango, que funciona como referencia absoluta.
 - **Page Break (salto de página)**: divide la hoja en páginas al imprimir; automático (línea punteada) o manual (línea continua).
 - **Paste Special (pegado especial)**: pega solo parte de lo copiado (valores, formato, validación...), en vez de todo el contenido y características de la celda.
@@ -66,11 +74,13 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Precedent Cell (celda precedente)**: celda a la que se refiere la fórmula de la celda activa (si `D5` es `=A1`, `A1` es precedente de `D5`).
 - **Precision (precisión)**: nivel de exactitud de un cálculo; el valor almacenado tiene la máxima, la del valor mostrado se puede cambiar.
 - **Print Area / Print Titles (área / títulos de impresión)**: la sección que se imprime / las filas o columnas que se repiten en cada página impresa.
+- **Project Explorer (explorador de proyectos)**: panel del editor de VBA para moverse entre las macros de distintos libros.
 - **Protection (protección)**: función de privacidad y seguridad para restringir la modificación o el acceso a un archivo o una hoja.
 - **Quick Access Toolbar (barra de acceso rápido)**: barra sobre la cinta con herramientas personalizables.
 - **Range (rango)**: dos o más celdas. **Adyacente** (`A1:C2`, el `:` significa "hasta") o **no adyacente** (`A1:A2,C1:C2`).
 - **Range VLOOKUP**: búsqueda sin coincidencia exacta; usa el mayor valor menor o igual al buscado y exige datos ordenados. Es el comportamiento por defecto.
 - **Reference (referencia)**: la dirección de una celda. **Relativa** (`D4`, cambia al copiar), **absoluta** (`$D$4`, no cambia) o **mixta** (`$D4`, `D$4`). **3D**: extendida a varias hojas (`Enero:Diciembre!B5`).
+- **Relative Macro (macro relativa)**: macro grabada con *Usar referencias relativas*; sirve cuando las tareas no son idénticas, porque registra posiciones relativas a la celda activa (por ejemplo, "bajar un paso") en vez de una celda fija como `B9`.
 - **Ribbon (cinta de opciones)**: barra principal con pestañas (Inicio, Insertar...) que agrupan los comandos.
 - **Scenario (escenario)**: conjunto concreto de valores dados a las celdas variables, con nombre. **Scenario Manager** (administrador de escenarios) los guarda y los compara; su **Scenario Summary** es una hoja estática con una columna por escenario.
 - **Slicer (segmentación de datos)**: botones visuales para filtrar una tabla dinámica, que muestran qué filtros están activos.
@@ -79,15 +89,19 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Sparkline (minigráfico)**: gráfico pequeño dentro de una sola celda.
 - **Specified Range (rango especificado)**: rango dado por referencias de celda, por ejemplo `B4:B9`.
 - **Status Bar (barra de estado)**: debajo de la hoja; zoom, vistas y cálculos rápidos de la selección.
+- **Store in a workbook / Store in Personal Macro workbook (guardar en el libro / en el libro de macros personal)**: en el primer caso la macro viaja con el libro; en el segundo se guarda en la carpeta de inicio de Excel, se abre oculta y sirve para varios libros.
 - **Stored Value (valor almacenado)**: el valor real que Excel tiene asignado a una celda, con la máxima precisión.
 - **Structure (estructura)**: cómo están organizados los datos (cantidad y orden de filas y columnas); clave para decidir cómo consolidar.
 - **Structured Reference (referencia estructurada)**: referencia a una tabla por nombre (`Ventas[Importe]`); se comporta como relativa.
+- **Sub**: abreviatura de *subroutine*; todas las macros grabadas empiezan con `Sub` y terminan con `End Sub`.
 - **SUMPRODUCT**: función que multiplica rangos o matrices entre sí y después suma los productos; sirve para promedios ponderados y para contar con condiciones.
 - **Table (tabla)**: rango que se extiende solo, con orden, filtro y formato integrados.
 - **Target Cell (celda objetivo)**: celda que se fija a un valor concreto (o se maximiza/minimiza) cambiando las celdas variables.
 - **Trendline (línea de tendencia)**: línea sobre un gráfico que muestra la tendencia de los datos: lineal, exponencial, logarítmica, polinómica, potencial o media móvil.
+- **Trusted Location (ubicación de confianza)**: ubicación cuyas macros se habilitan automáticamente, sin tener que habilitarlas.
 - **Value (valor)**: dato numérico en una celda; solo los valores se pueden usar en cálculos.
 - **Variable Cell (celda variable)**: celda con un valor que se permite cambiar al inicio del análisis (la que modifican Goal Seek, Solver o un escenario).
+- **VBA (Visual Basic for Applications) / VBE (Visual Basic Editor)**: el código que usa Excel para registrar macros / la ventana (`Alt + F11`) donde se crean y editan.
 - **VLOOKUP**: función de búsqueda vertical: busca un valor en la primera columna de una tabla y devuelve otro de la misma fila.
 - **Lookup Table / Table Array (tabla de búsqueda)**: la tabla que contiene el valor buscado y el que se quiere recuperar.
 - **Watch Window (ventana de inspección)**: barra de herramientas que permite vigilar celdas y sus fórmulas mientras uno navega por el libro.

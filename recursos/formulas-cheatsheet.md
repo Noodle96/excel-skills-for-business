@@ -2,7 +2,7 @@
 
 Funciones y sintaxis vistas hasta ahora, con el módulo donde se explican. Se usan los nombres en inglés de las funciones, como en el curso. En países donde la coma es separador decimal, los argumentos se separan con `;` en vez de `,`.
 
-> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-5). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 ## Básicas y cálculo
 
@@ -56,6 +56,7 @@ Funciones y sintaxis vistas hasta ahora, con el módulo donde se explican. Se us
 | `TODAY` | `=TODAY()` | Fecha de hoy, se actualiza al abrir el archivo (la fija es `Ctrl + ;`) | [Intermediate I M2](../02-intermediate-1/notas/modulo-02/02-text-date-functions.md) |
 | `NOW` | `=NOW()` | Fecha y hora actuales, se actualiza (la fija es `Ctrl + Shift + ;`) | [Intermediate I M2](../02-intermediate-1/notas/modulo-02/02-text-date-functions.md) |
 | `YEARFRAC` | `=YEARFRAC(fecha_inicio, fecha_fin)` | Fracción de año entre dos fechas | [Intermediate I M2](../02-intermediate-1/notas/modulo-02/02-text-date-functions.md) |
+| Lunes de la semana actual | `=TODAY()-WEEKDAY(TODAY(),3)` | `WEEKDAY(fecha,3)` da 0 para el lunes y 6 para el domingo; restarlo a la fecha da el lunes (con `;` como separador si Excel lo usa) | [Intermediate II M6](../03-intermediate-2/notas/modulo-06/assessment.md) |
 | `WEEKDAY`, `DATEDIF`, `EDATE`, `EOMONTH` | — | Día de la semana, diferencia entre fechas, sumar meses, fin de mes (avance; se profundizan en Advanced) | [Intermediate I M2](../02-intermediate-1/notas/modulo-02/02-text-date-functions.md) |
 
 ## Referencias
@@ -153,6 +154,20 @@ Funciones y sintaxis vistas hasta ahora, con el módulo donde se explican. Se us
 | **Solver** (complemento: Archivo > Opciones > Complementos) | **Maximizar, minimizar o llevar a un valor** una celda objetivo cambiando **varias** celdas, con restricciones. Motores: **Simplex LP** (modelos lineales, óptimo global), **GRG Nonlinear** (no lineal suave, óptimo local), **Evolutionary** (modelos con saltos: `IF`, búsquedas) | [Intermediate II M5](../03-intermediate-2/notas/modulo-05/05-data-modelling.md) |
 
 **Goal Seek vs Solver**: una celda y un valor exacto → Goal Seek; varias celdas, restricciones o maximizar/minimizar → Solver.
+
+## Macros y VBA
+
+| Concepto | Código / uso | Para qué sirve | Dónde |
+|---|---|---|---|
+| Estructura de una macro | `Sub Nombre()` … `End Sub` | Toda macro grabada empieza con `Sub` y termina con `End Sub`. El nombre no lleva **espacios** (usar `_`) | [Intermediate II M6](../03-intermediate-2/notas/modulo-06/06-recording-macros.md) |
+| Comentario | `' texto` | Línea que Excel ignora al ejecutar; sirve para documentar. Convertir una línea con error en comentario en vez de borrarla | [Intermediate II M6](../03-intermediate-2/notas/modulo-06/06-recording-macros.md) |
+| Fórmula en R1C1 | `ActiveCell.FormulaR1C1 = "=SUM(R[-5]C:R[-1]C)"` | `R[-5]C` = 5 filas arriba, misma columna; `RC[-1]` = misma fila, una columna a la izquierda. Se graba así cuando la referencia es relativa | [Intermediate II M6](../03-intermediate-2/notas/modulo-06/assessment.md) |
+| Selección absoluta / relativa | `Range("A1").Select` · `ActiveCell.Offset(1, 0).Select` | Celda fija (botón apagado) / desplazamiento desde la celda activa (botón *Usar referencias relativas* encendido) | [Intermediate II M6](../03-intermediate-2/notas/modulo-06/06-recording-macros.md) |
+| Mostrar un escenario | `ActiveSheet.Scenarios("Nombre").Show` | La línea que graba Scenario Manager > Mostrar; depende de la hoja activa | [Intermediate II M7](../03-intermediate-2/notas/modulo-07/final-assessment.md) |
+| Importar texto en la celda activa | `Destination:=ActiveCell` | Cambiar el destino absoluto que graba `QueryTables.Add` para que la importación sea relativa; comentar `'.CommandType = 0` si da error | [Intermediate II M6](../03-intermediate-2/notas/modulo-06/06-recording-macros.md) |
+| Pedir un dato al usuario | `"...BPAY" & InputBox("mensaje", "título") & ".txt"` | Une al nombre del archivo lo que escribe el usuario; si cancela, devuelve texto vacío | [Intermediate II M6](../03-intermediate-2/notas/modulo-06/06-recording-macros.md) |
+
+**Cuidados**: guardar como libro habilitado para macros (`.xlsm`); el deshacer no se graba; en una macro relativa la celda de partida forma parte de la macro; no escribir una fórmula en la fila justo debajo de una tabla (activa la fila de totales) — [reto de la semana](../03-intermediate-2/notas/modulo-06/advanced-practice-challenge.md).
 
 ## Por completar
 
