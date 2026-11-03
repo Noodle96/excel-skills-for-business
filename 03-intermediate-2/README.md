@@ -37,5 +37,5 @@ Al terminar el curso podrás:
 | [x] 03 | Automating Lookups | [notas](notas/modulo-03/) |
 | [x] 04 | Formula Auditing and Protection | [notas](notas/modulo-04/) |
 | [x] 05 | Data Modelling | [notas](notas/modulo-05/) |
-| [ ] 06 | Recording Macros | [notas](notas/modulo-06/) |
-| [ ] 07 | Final Assessment | |
+| [x] 06 | Recording Macros | [notas](notas/modulo-06/) |
+| [x] 07 | Final Assessment | [notas](notas/modulo-07/) |
