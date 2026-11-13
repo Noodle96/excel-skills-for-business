@@ -2,7 +2,7 @@
 
 Términos del curso con una definición breve. Ordenados alfabéticamente por el término en inglés, como aparece en el curso.
 
-> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6) y Advanced (módulo 1). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 - **#N/A**: error que suele aparecer cuando una función de búsqueda no encuentra el valor buscado en la tabla.
 - **Active Cell (celda activa)**: la celda seleccionada en ese momento, con borde grueso.
@@ -40,6 +40,7 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Dependent Cell (celda dependiente)**: celda cuya fórmula se refiere a la celda activa (si `D5` es `=A1`, `D5` depende de `A1`).
 - **Displayed Value (valor mostrado)**: el valor de una celda que ve el usuario, según su formato.
 - **Drop-down List (lista desplegable)**: lista que aparece junto a una celda con validación de tipo Lista, con las opciones permitidas.
+- **Dual data entry (entrada doble de datos)**: escribir a mano el mismo dato en más de un lugar. Se evita: produce errores e inconsistencias y obliga a rastrear dónde actualizar la misma información.
 - **Error Message (mensaje de error)**: aviso emergente al escribir en una celda algo que incumple su validación (estilo Detener, Advertencia o Información).
 - **Exact Match VLOOKUP**: búsqueda de un valor con identidad única (ID, número de cuenta); exige `FALSE` como cuarto argumento.
 - **Field / Field List (campo / lista de campos)**: una columna del conjunto de datos / la lista de todas ellas en una tabla dinámica.
@@ -51,6 +52,7 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Function (función)**: "mini-programa" que se usa dentro de una fórmula (`SUM`, `MID`...). Puede estar **anidada** (*Nested*) dentro de otra, que la usa como argumento.
 - **Goal Seek (buscar objetivo)**: herramienta de What-If Analysis que cambia **una** celda de entrada hasta que una fórmula alcance un valor exacto. Es iterativo y aproximado.
 - **Gridlines (líneas de cuadrícula)**: líneas que cruzan el área de trazado y ayudan a seguir los valores de los ejes.
+- **Hard-coding (valores fijos en fórmulas)**: escribir un número directamente dentro de una fórmula en vez de apuntar a una celda de supuestos. Se evita a toda costa, porque esconde el supuesto y complica los cambios.
 - **INDEX**: devuelve un valor, o la referencia a un valor, desde una tabla o rango según la fila y la columna indicadas. Argumentos: *array*, *row_num*, *col_num*, *area_num*.
 - **Input Message (mensaje de entrada)**: aviso que aparece al hacer clic en una celda con validación, para orientar sobre qué valores son razonables.
 - **Iteration (iteración)**: repetición de un cálculo por parte de Excel; clave para resolver referencias circulares con el cálculo iterativo.
@@ -93,10 +95,12 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Stored Value (valor almacenado)**: el valor real que Excel tiene asignado a una celda, con la máxima precisión.
 - **Structure (estructura)**: cómo están organizados los datos (cantidad y orden de filas y columnas); clave para decidir cómo consolidar.
 - **Structured Reference (referencia estructurada)**: referencia a una tabla por nombre (`Ventas[Importe]`); se comporta como relativa.
+- **Styles (estilos)**: controlan el formato de todo un libro; un estilo asignado a una celda controla todos sus aspectos (fuente, número, bordes, relleno...).
 - **Sub**: abreviatura de *subroutine*; todas las macros grabadas empiezan con `Sub` y terminan con `End Sub`.
 - **SUMPRODUCT**: función que multiplica rangos o matrices entre sí y después suma los productos; sirve para promedios ponderados y para contar con condiciones.
 - **Table (tabla)**: rango que se extiende solo, con orden, filtro y formato integrados.
 - **Target Cell (celda objetivo)**: celda que se fija a un valor concreto (o se maximiza/minimiza) cambiando las celdas variables.
+- **Themes (temas)**: conjunto de formato para todo el documento (colores, fuentes y efectos); se pueden personalizar y compartir con otros programas de Office.
 - **Trendline (línea de tendencia)**: línea sobre un gráfico que muestra la tendencia de los datos: lineal, exponencial, logarítmica, polinómica, potencial o media móvil.
 - **Trusted Location (ubicación de confianza)**: ubicación cuyas macros se habilitan automáticamente, sin tener que habilitarlas.
 - **Value (valor)**: dato numérico en una celda; solo los valores se pueden usar en cálculos.
@@ -107,4 +111,5 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Watch Window (ventana de inspección)**: barra de herramientas que permite vigilar celdas y sus fórmulas mientras uno navega por el libro.
 - **What-If Analysis (análisis de hipótesis)**: grupo de herramientas (Data Table, Goal Seek, Scenario Manager) que permite probar distintos valores en las fórmulas e investigar los resultados.
 - **Wildcard (comodín)**: `?` sustituye una letra y `*` sustituye varias, en criterios de texto.
+- **Wire-framing (esquema o boceto)**: diagrama básico del contenido, la disposición y la jerarquía de los elementos de una hoja de cálculo, que se puede dibujar primero en papel para visualizar y optimizar las ideas.
 - **Workbook / Worksheet (libro / hoja)**: el archivo de Excel completo / cada una de sus pestañas.

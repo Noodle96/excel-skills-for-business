@@ -2,7 +2,7 @@
 
 En Mac, `Cmd` sustituye a `Ctrl` salvo que se indique otra cosa. Lista completa: [Microsoft Support (Windows)](https://support.office.com/en-us/article/Excel-keyboard-shortcuts-and-function-keys-for-Windows-1798d9d5-842a-42b8-9c99-9b7213f0040f) · [Microsoft Support (Mac)](https://support.office.com/en-us/article/Keyboard-shortcuts-in-Excel-2016-for-Mac-acf5419e-1f87-444d-962f-4e951a658ccd).
 
-> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6; el módulo 5 no trajo atajos nuevos en su Toolbox). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6; el módulo 5 no trajo atajos nuevos en su Toolbox) y Advanced (módulo 1). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 ## Archivo e impresión
 | Atajo | Acción | Dónde se vio |
@@ -21,7 +21,9 @@ En Mac, `Cmd` sustituye a `Ctrl` salvo que se indique otra cosa. Lista completa:
 | `Ctrl + Y` | Rehacer / repetir un paso varias veces | Essentials M1 |
 | `Ctrl + X` / `Ctrl + C` / `Ctrl + V` | Cortar / copiar / pegar | Essentials M5 |
 | `Ctrl + Alt + V` | Pegado especial (valores, formato, transponer...) | Essentials M1 |
-| `Alt + Enter` | Salto de línea dentro de la celda | Essentials M1 |
+| `Alt + Enter` | Salto de línea dentro de la celda (también dentro de una fórmula, para que sea más legible) | Essentials M1, Advanced M1 |
+| `Enter` / `Tab` | Confirmar el cambio y pasar a la celda de **abajo** / de la **derecha** | Advanced M1 |
+| `Shift + F2` | Insertar o editar un comentario | Advanced M1 |
 | `Ctrl + Enter` | Terminar de editar **y quedarse en la misma celda** | Intermediate I M3 |
 | `Ctrl + ;` | Insertar la fecha de hoy como valor **fijo** | Intermediate I M2 |
 | `Ctrl + Shift + ;` (Mac: `Cmd + ;`) | Insertar la hora actual como valor **fijo** | Intermediate I M2 |
@@ -43,8 +45,9 @@ En Mac, `Cmd` sustituye a `Ctrl` salvo que se indique otra cosa. Lista completa:
 | `Ctrl + [` | Ir a las celdas **precedentes** de la celda activa | Intermediate II M4 |
 | `Ctrl + ]` | Ir a las celdas **dependientes** de la celda activa | Intermediate II M4 |
 | `Ctrl` + clic (dentro de una función) | Inserta la coma entre referencias, ej. `CONCAT(A2,D2,G2)` | Intermediate I M2 |
-| `F3` | Pegar nombre (lista de rangos con nombre) | Intermediate I M3 |
-| `Ctrl + F3` | Administrador de nombres (solo Windows) | Intermediate I M3 |
+| `F3` | Pegar nombre (lista de rangos con nombre) | Intermediate I M3, Advanced M1 |
+| `Ctrl + F3` | Administrador de nombres (solo Windows; el Toolbox del Advanced lo da también como "nombrar una celda o rango", con `Cmd + F3` en Mac) | Intermediate I M3, Advanced M1 |
+| `Ctrl + Shift + U` | Expandir o contraer la barra de fórmulas | Advanced M1 |
 | `Cmd + fn + F3` · `Cmd + F3` · `Ctrl + L` | Definir nombre (solo Mac; el Intermediate I indica la primera forma, el Intermediate II las otras dos, según cómo use las teclas F el teclado) | Intermediate I M3, Intermediate II M1 |
 | `Ctrl + Shift + F3` (Mac: `Cmd + Shift + fn + F3` o `Cmd + Shift + F3`) | Crear nombres desde la selección | Intermediate I M3, Intermediate II M1 |
 
@@ -56,6 +59,7 @@ En Mac, `Cmd` sustituye a `Ctrl` salvo que se indique otra cosa. Lista completa:
 | `Ctrl + 5` | Tachado | Essentials M3 |
 | `Ctrl + Shift + &` | Borde de contorno a la selección | Essentials M3 |
 | `Ctrl + Shift + ~` | Formato General (quita el formato de número) | Essentials M3 |
+| `Ctrl + Shift + !` / `$` / `%` | Formato de número / moneda / porcentaje | Advanced M1 |
 
 ## Navegación
 | Atajo | Acción | Dónde se vio |
@@ -67,6 +71,7 @@ En Mac, `Cmd` sustituye a `Ctrl` salvo que se indique otra cosa. Lista completa:
 | `Ctrl + Rueda del mouse` | Zoom | Essentials M1 |
 | `Ctrl + Av Pág` / `Ctrl + Re Pág` (Mac: `Option + →` / `Option + ←`) | Hoja siguiente / hoja anterior | Essentials M2, Intermediate I M1 |
 | `Ctrl + .` | Moverse entre las esquinas de una tabla | Intermediate I M5 |
+| `Ctrl + Tab` (Mac: `Cmd + ~`) | Ir al libro siguiente | Advanced M1 |
 
 > Tip de navegación: clic derecho sobre las flechas junto a las pestañas de hoja abre el diálogo **Activar** con la lista de hojas del libro.
 

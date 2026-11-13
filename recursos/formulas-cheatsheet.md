@@ -2,7 +2,7 @@
 
 Funciones y sintaxis vistas hasta ahora, con el módulo donde se explican. Se usan los nombres en inglés de las funciones, como en el curso. En países donde la coma es separador decimal, los argumentos se separan con `;` en vez de `,`.
 
-> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6) y Advanced (módulo 1). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 ## Básicas y cálculo
 
@@ -168,6 +168,24 @@ Funciones y sintaxis vistas hasta ahora, con el módulo donde se explican. Se us
 | Pedir un dato al usuario | `"...BPAY" & InputBox("mensaje", "título") & ".txt"` | Une al nombre del archivo lo que escribe el usuario; si cancela, devuelve texto vacío | [Intermediate II M6](../03-intermediate-2/notas/modulo-06/06-recording-macros.md) |
 
 **Cuidados**: guardar como libro habilitado para macros (`.xlsm`); el deshacer no se graba; en una macro relativa la celda de partida forma parte de la macro; no escribir una fórmula en la fila justo debajo de una tabla (activa la fila de totales) — [reto de la semana](../03-intermediate-2/notas/modulo-06/advanced-practice-challenge.md).
+
+## Diseño de hojas y modelos
+
+| Patrón | Ejemplo | Para qué sirve | Dónde |
+|---|---|---|---|
+| Fechas de un modelo mensual | `=EOMONTH(G5,0)` · `=G6+1` | Último día del mes · primer día del mes siguiente; se rellenan las dos filas hasta el final | [Advanced M1](../04-advanced/notas/modulo-01/assessment.md) |
+| Serie de 12 meses desde los datos | `=EOMONTH(MAX(tbl_Sales[Date]),-12)+1` · `=EDATE(A7,1)` | Arranque de la serie a partir de la última venta, sin escribir la fecha a mano | [Advanced M1](../04-advanced/notas/modulo-01/01-spreadsheet-design-documentation.md) |
+| Mes y año de una fecha | `=MONTH(G5)` · `=YEAR(G5)` | Cabeceras de ayuda para fórmulas que dependen del mes y del año (formato General) | [Advanced M1](../04-advanced/notas/modulo-01/assessment.md) |
+| Factor de crecimiento anual | `=F11*(1+IF(G$7=Mes,INDEX(Tasas,MATCH(G$8,Años,0)),0))` | Una sola fórmula por fila: el factor sube una vez al año, en el mes indicado, con la tasa de ese año. `G$7`/`G$8` con la fila fija; los supuestos, con nombre | [Advanced M1](../04-advanced/notas/modulo-01/assessment.md) |
+| Valor × factor, con signo | `=ValorInicial*G11` · `=-ValorInicial*G12` | Ingresos (positivos) y costos o gastos (negativos); los subtotales los **suman** | [Advanced M1](../04-advanced/notas/modulo-01/assessment.md) |
+| Nombre dinámico de navegación | `=INDEX(Data!F:F,ROWS(tbl_Sales)+4)` | Final de una tabla que se ajusta sola al agregar filas; sirve de destino de un botón o hipervínculo | [Advanced M1](../04-advanced/notas/modulo-01/01-spreadsheet-design-documentation.md) |
+| Nombre sobre una columna de tabla | `=NombreTabla[Columna]` | La forma más robusta de nombrar una columna: sigue siempre a la tabla | [Advanced M1](../04-advanced/notas/modulo-01/01-spreadsheet-design-documentation.md) |
+
+**Formato de número personalizado** (Ctrl + 1 > Personalizada): `dd-mmm-yy` (fecha como `01-Jan-18`; en Excel en español, `dd-mmm-aa`) · `#,##0;(#,##0)` (miles sin decimales y negativos entre paréntesis; con punto como separador, `#.##0;(#.##0)`).
+
+**Inmovilizar paneles**: se selecciona la celda **debajo y a la derecha** de lo que se quiere congelar (para congelar `A1:F8`, `G9`) y luego Vista > Inmovilizar paneles.
+
+**Buenas prácticas de diseño** ([Advanced M1](../04-advanced/notas/modulo-01/01-spreadsheet-design-documentation.md)): una sola fuente por dato (sin entrada doble), ningún valor fijo dentro de fórmulas (usar celdas de supuestos con nombre), una fórmula consistente por fila (la celda distinta, en rojo), prefijos en los nombres (`tbl_`, `lkp_`, `nav_`), estilos y temas para el formato, y comentarios para documentar.
 
 ## Por completar
 
