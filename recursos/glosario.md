@@ -2,16 +2,20 @@
 
 Términos del curso con una definición breve. Ordenados alfabéticamente por el término en inglés, como aparece en el curso.
 
-> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6) y Advanced (módulo 1). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6) y Advanced (módulos 1-2). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 - **#N/A**: error que suele aparecer cuando una función de búsqueda no encuentra el valor buscado en la tabla.
 - **Active Cell (celda activa)**: la celda seleccionada en ese momento, con borde grueso.
 - **Add-in (complemento)**: función que se agrega a Excel para complementar las existentes. Solver es un complemento y hay que activarlo (Archivo > Opciones > Complementos).
 - **Argument (argumento)**: cada entrada que recibe una función; se separan con comas y se escriben entre paréntesis.
+- **Array (matriz)**: cuadrícula de cualquier número de celdas. En la barra de fórmulas, los dos puntos entre dos referencias indican una matriz (`A5:A7`).
+- **Array Constant (constante matricial)**: matriz de **valores** (no de referencias) escrita entre llaves, por ejemplo `{1;2;3}` (`;` separa filas y `,` columnas en Excel en inglés).
+- **Array Formula (fórmula matricial)**: fórmula que trabaja con matrices completas; se confirma con `Ctrl + Shift + Enter` y se muestra con llaves `{ }`. También se llama fórmula **CSE**.
 - **Automated drop-down List (lista desplegable automática)**: lista desplegable que apunta a una lista de búsqueda guardada en un rango con nombre y una tabla; se actualiza sola cuando cambia esa lista.
 - **Axes X & Y (ejes)**: el eje X va abajo y suele llevar las categorías; el eje Y va a un lado y lleva los valores. En los gráficos de barras están invertidos.
 - **Base Case Scenario (escenario base)**: el escenario en que todas las celdas variables tienen los valores esperados al inicio del análisis.
 - **Best (Worst) Case Scenario (mejor o peor caso)**: el escenario en que las celdas variables tienen los valores más (menos) favorables desde nuestra perspectiva.
+- **Calculated Column (columna calculada)**: columna de una tabla cuya fórmula se rellena sola en todas las filas, normalmente con referencias estructuradas (`=[@Precio]*[@Cantidad]`).
 - **Cell (celda)**: intersección de una columna y una fila; se nombra con la letra y el número (`B3`).
 - **Chart Area (área del gráfico)**: todo el gráfico, con sus series, ejes, títulos y leyendas. Es la zona desde la que se arrastra el gráfico completo.
 - **Chart Sheet (hoja de gráfico)**: hoja que contiene solo un gráfico. Si el gráfico está junto a otros datos, es un gráfico **incrustado** (*Embedded Chart*).
@@ -27,6 +31,7 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Consolidate (consolidar)**: herramienta que combina varios rangos u hojas en un resumen, por posición o por etiquetas.
 - **Constraint (restricción)**: límite al valor de una celda concreta; en Solver, una condición que la solución debe cumplir (`<=`, `=`, `>=`, entero, binario).
 - **Criteria Range (rango de criterio)**: el rango de datos donde se evalúa la condición de una función como `COUNTIFS` o `SUMIFS`.
+- **CSE (Control-Shift-Enter)**: forma de confirmar una fórmula matricial con `Ctrl + Shift + Enter`. En Excel 365 la mayoría de las fórmulas matriciales se confirman con `Enter` y se **derraman** solas.
 - **Dashboard (panel)**: pantalla de resumen con gráficos y tablas, a veces interactiva, que da una vista rápida de los datos.
 - **Data import (importación de datos)**: permite a Excel leer datos que pueden venir de un archivo de texto (por ejemplo, los datos de BPay).
 - **Data Label (etiqueta de datos)**: información adicional de un punto de datos, normalmente su valor.
@@ -53,6 +58,8 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Goal Seek (buscar objetivo)**: herramienta de What-If Analysis que cambia **una** celda de entrada hasta que una fórmula alcance un valor exacto. Es iterativo y aproximado.
 - **Gridlines (líneas de cuadrícula)**: líneas que cruzan el área de trazado y ayudan a seguir los valores de los ejes.
 - **Hard-coding (valores fijos en fórmulas)**: escribir un número directamente dentro de una fórmula en vez de apuntar a una celda de supuestos. Se evita a toda costa, porque esconde el supuesto y complica los cambios.
+- **Helper Column (columna auxiliar)**: columna que no es el resultado final, sino un paso intermedio (por ejemplo, los números 1, 2, 3... que se buscan con `MATCH` al ordenar con fórmulas).
+- **Implicit Intersection (intersección implícita)**: comportamiento de Excel antiguo cuando una fórmula normal recibe un rango donde esperaba un valor: toma solo el valor de la misma fila (o columna). Por eso las fórmulas matriciales necesitan `Ctrl + Shift + Enter` en versiones sin matrices dinámicas.
 - **INDEX**: devuelve un valor, o la referencia a un valor, desde una tabla o rango según la fila y la columna indicadas. Argumentos: *array*, *row_num*, *col_num*, *area_num*.
 - **Input Message (mensaje de entrada)**: aviso que aparece al hacer clic en una celda con validación, para orientar sobre qué valores son razonables.
 - **Iteration (iteración)**: repetición de un cálculo por parte de Excel; clave para resolver referencias circulares con el cálculo iterativo.
@@ -67,6 +74,7 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Macro**: conjunto de instrucciones de programación que se pueden aplicar en Excel para automatizar tareas repetitivas. **Macro Dialog Box**: ventana (`Alt + F8`) para crearlas, editarlas, eliminarlas o ejecutarlas. **Macro Recorder**: registra en VBA las acciones que se hacen en Excel. **Macro-Enabled**: libro guardado con sus macros (`.xlsm`).
 - **MATCH**: busca un valor en una fila o columna y devuelve su posición; tipo 0 exacta, 1 menor, -1 mayor.
 - **Module (módulo)**: unidad de almacenamiento de un conjunto de macros.
+- **Multi-Cell Array Formula (fórmula matricial de varias celdas)**: fórmula matricial que da resultados en varias celdas con una sola fórmula; se selecciona antes todo el rango de salida.
 - **Named Range (rango con nombre)**: nombre memorable para una celda o rango, que funciona como referencia absoluta.
 - **Page Break (salto de página)**: divide la hoja en páginas al imprimir; automático (línea punteada) o manual (línea continua).
 - **Paste Special (pegado especial)**: pega solo parte de lo copiado (valores, formato, validación...), en vez de todo el contenido y características de la celda.
@@ -85,22 +93,25 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Relative Macro (macro relativa)**: macro grabada con *Usar referencias relativas*; sirve cuando las tareas no son idénticas, porque registra posiciones relativas a la celda activa (por ejemplo, "bajar un paso") en vez de una celda fija como `B9`.
 - **Ribbon (cinta de opciones)**: barra principal con pestañas (Inicio, Insertar...) que agrupan los comandos.
 - **Scenario (escenario)**: conjunto concreto de valores dados a las celdas variables, con nombre. **Scenario Manager** (administrador de escenarios) los guarda y los compara; su **Scenario Summary** es una hoja estática con una columna por escenario.
+- **Single-Cell Array Formula (fórmula matricial de una celda)**: fórmula matricial que usa matrices por dentro pero da un solo resultado, como `=SUM(IF(A1:A9<10,A1:A9,0))`.
 - **Slicer (segmentación de datos)**: botones visuales para filtrar una tabla dinámica, que muestran qué filtros están activos.
 - **Solver**: complemento de optimización que maximiza, minimiza o lleva a un valor una celda objetivo cambiando varias celdas, con restricciones. Motores: Simplex LP (lineal), GRG Nonlinear (no lineal suave) y Evolutionary (modelos con saltos).
 - **Sorting (ordenar)**: organiza los datos en un orden, por uno o varios niveles.
 - **Sparkline (minigráfico)**: gráfico pequeño dentro de una sola celda.
 - **Specified Range (rango especificado)**: rango dado por referencias de celda, por ejemplo `B4:B9`.
+- **Spill (derrame)**: en Excel 365/2021, la propiedad de una fórmula de extender su resultado a las celdas vecinas sin que se seleccione antes el rango de salida. Si algo lo bloquea, da `#SPILL!`.
 - **Status Bar (barra de estado)**: debajo de la hoja; zoom, vistas y cálculos rápidos de la selección.
 - **Store in a workbook / Store in Personal Macro workbook (guardar en el libro / en el libro de macros personal)**: en el primer caso la macro viaja con el libro; en el segundo se guarda en la carpeta de inicio de Excel, se abre oculta y sirve para varios libros.
 - **Stored Value (valor almacenado)**: el valor real que Excel tiene asignado a una celda, con la máxima precisión.
 - **Structure (estructura)**: cómo están organizados los datos (cantidad y orden de filas y columnas); clave para decidir cómo consolidar.
-- **Structured Reference (referencia estructurada)**: referencia a una tabla por nombre (`Ventas[Importe]`); se comporta como relativa.
+- **Structured Reference (referencia estructurada)**: referencia a una tabla y a sus columnas por nombre (`Ventas[Importe]`, `Ventas[@Importe]` para la fila actual, `Ventas[[#Headers],[Importe]]` para el encabezado). Crece sola con la tabla y se comporta como relativa al arrastrar en horizontal; duplicando el nombre de la columna (`[@[Importe]:[Importe]]`) se vuelve **absoluta**.
 - **Styles (estilos)**: controlan el formato de todo un libro; un estilo asignado a una celda controla todos sus aspectos (fuente, número, bordes, relleno...).
 - **Sub**: abreviatura de *subroutine*; todas las macros grabadas empiezan con `Sub` y terminan con `End Sub`.
 - **SUMPRODUCT**: función que multiplica rangos o matrices entre sí y después suma los productos; sirve para promedios ponderados y para contar con condiciones.
 - **Table (tabla)**: rango que se extiende solo, con orden, filtro y formato integrados.
 - **Target Cell (celda objetivo)**: celda que se fija a un valor concreto (o se maximiza/minimiza) cambiando las celdas variables.
 - **Themes (temas)**: conjunto de formato para todo el documento (colores, fuentes y efectos); se pueden personalizar y compartir con otros programas de Office.
+- **Transpose (transponer)**: convertir una fila de valores en columna, o al revés. Con la función `TRANSPOSE` (matricial, vinculada al origen) o con *Pegado especial → Transponer* (resultado fijo).
 - **Trendline (línea de tendencia)**: línea sobre un gráfico que muestra la tendencia de los datos: lineal, exponencial, logarítmica, polinómica, potencial o media móvil.
 - **Trusted Location (ubicación de confianza)**: ubicación cuyas macros se habilitan automáticamente, sin tener que habilitarlas.
 - **Value (valor)**: dato numérico en una celda; solo los valores se pueden usar en cálculos.

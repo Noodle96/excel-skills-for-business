@@ -2,7 +2,7 @@
 
 En Mac, `Cmd` sustituye a `Ctrl` salvo que se indique otra cosa. Lista completa: [Microsoft Support (Windows)](https://support.office.com/en-us/article/Excel-keyboard-shortcuts-and-function-keys-for-Windows-1798d9d5-842a-42b8-9c99-9b7213f0040f) · [Microsoft Support (Mac)](https://support.office.com/en-us/article/Keyboard-shortcuts-in-Excel-2016-for-Mac-acf5419e-1f87-444d-962f-4e951a658ccd).
 
-> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6; el módulo 5 no trajo atajos nuevos en su Toolbox) y Advanced (módulo 1). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6; el módulo 5 no trajo atajos nuevos en su Toolbox) y Advanced (módulos 1-2). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 ## Archivo e impresión
 | Atajo | Acción | Dónde se vio |
@@ -48,6 +48,8 @@ En Mac, `Cmd` sustituye a `Ctrl` salvo que se indique otra cosa. Lista completa:
 | `F3` | Pegar nombre (lista de rangos con nombre) | Intermediate I M3, Advanced M1 |
 | `Ctrl + F3` | Administrador de nombres (solo Windows; el Toolbox del Advanced lo da también como "nombrar una celda o rango", con `Cmd + F3` en Mac) | Intermediate I M3, Advanced M1 |
 | `Ctrl + Shift + U` | Expandir o contraer la barra de fórmulas | Advanced M1 |
+| `Ctrl + Shift + Enter` | Calcular una **fórmula matricial** (CSE): Excel la muestra entre llaves `{ }` (en Excel 365, `Enter` basta para la mayoría) | Advanced M2 |
+| `F2` y luego `Ctrl + Shift + Enter` | Convertir una fórmula existente en fórmula matricial | Advanced M2 |
 | `Cmd + fn + F3` · `Cmd + F3` · `Ctrl + L` | Definir nombre (solo Mac; el Intermediate I indica la primera forma, el Intermediate II las otras dos, según cómo use las teclas F el teclado) | Intermediate I M3, Intermediate II M1 |
 | `Ctrl + Shift + F3` (Mac: `Cmd + Shift + fn + F3` o `Cmd + Shift + F3`) | Crear nombres desde la selección | Intermediate I M3, Intermediate II M1 |
 

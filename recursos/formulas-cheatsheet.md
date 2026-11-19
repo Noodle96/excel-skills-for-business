@@ -2,7 +2,7 @@
 
 Funciones y sintaxis vistas hasta ahora, con el módulo donde se explican. Se usan los nombres en inglés de las funciones, como en el curso. En países donde la coma es separador decimal, los argumentos se separan con `;` en vez de `,`.
 
-> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6) y Advanced (módulo 1). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6) y Advanced (módulos 1-2). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 ## Básicas y cálculo
 
@@ -186,6 +186,29 @@ Funciones y sintaxis vistas hasta ahora, con el módulo donde se explican. Se us
 **Inmovilizar paneles**: se selecciona la celda **debajo y a la derecha** de lo que se quiere congelar (para congelar `A1:F8`, `G9`) y luego Vista > Inmovilizar paneles.
 
 **Buenas prácticas de diseño** ([Advanced M1](../04-advanced/notas/modulo-01/01-spreadsheet-design-documentation.md)): una sola fuente por dato (sin entrada doble), ningún valor fijo dentro de fórmulas (usar celdas de supuestos con nombre), una fórmula consistente por fila (la celda distinta, en rojo), prefijos en los nombres (`tbl_`, `lkp_`, `nav_`), estilos y temas para el formato, y comentarios para documentar.
+
+## Referencias estructuradas y fórmulas matriciales
+
+| Patrón | Ejemplo | Para qué sirve | Dónde |
+|---|---|---|---|
+| Columna de una tabla | `=SUM(tbl[Importe])` | Datos de la columna, sin encabezado ni totales; crece con la tabla | [Advanced M2](../04-advanced/notas/modulo-02/02-advanced-formula-techniques.md) |
+| Fila actual (`@`) | `=[@Precio]*[@Cantidad]` | Columna calculada: usa solo los valores de esa fila | [Advanced M2](../04-advanced/notas/modulo-02/02-advanced-formula-techniques.md) |
+| Varias columnas, fila actual / todas | `tbl[@[A]:[B]]` · `tbl[[A]:[B]]` | Con `@` suma solo esta fila; sin `@` el bloque completo (total general). Sin `@` dentro de una columna calculada: todas las filas dan lo mismo | [Advanced M2](../04-advanced/notas/modulo-02/02-advanced-formula-techniques.md) |
+| Encabezado y nº de filas | `tbl[[#Headers],[A]]` · `=ROWS(tbl)` | Traer el título por fórmula (en una celda libre) · contar las filas de datos | [Advanced M2](../04-advanced/notas/modulo-02/02-advanced-formula-techniques.md) |
+| Referencia estructurada absoluta | `tbl[@[A]:[A]]` | Se queda fija en la columna al arrastrar en horizontal (la sencilla `[@A]` se desplaza) | [Advanced M2](../04-advanced/notas/modulo-02/02-advanced-formula-techniques.md) |
+| Ordenar con fórmulas | `COUNTIFS(rng,"<="&A1)` → `MATCH(n,posiciones,0)` → `INDEX(rng,fila)` | Lista ordenada alfabéticamente que se actualiza sola (con columna auxiliar 1, 2, 3...) | [Advanced M2](../04-advanced/notas/modulo-02/02-advanced-formula-techniques.md) |
+| Fórmula matricial de varias celdas | `{=C4:C36*H4}` · `{=TRANSPOSE(A4:A14)}` | Se selecciona primero todo el rango de salida (tamaño exacto) y se confirma con `Ctrl + Shift + Enter` | [Advanced M2](../04-advanced/notas/modulo-02/02-advanced-formula-techniques.md) |
+| Constante matricial | `=LARGE(rng,{1;2;3})` | Los 3 mayores con una sola fórmula (`;` filas, `,` columnas) | [Advanced M2](../04-advanced/notas/modulo-02/02-advanced-formula-techniques.md) |
+| Fórmula matricial de una celda | `{=SUM(IF(F4:F54<10,E4:E54*F4:F54,0))}` | Sumar el producto de dos columnas con una condición (algo que `SUMIFS` no puede) | [Advanced M2](../04-advanced/notas/modulo-02/02-advanced-formula-techniques.md) |
+| Contar con `TRUE`/`FALSE` | `{=SUM((precio>precio_viejo)*1)}` | `*1` convierte los lógicos en 1 y 0; sin matrices, `=SUMPRODUCT(--(precio>precio_viejo))` | [Advanced M2](../04-advanced/notas/modulo-02/02-advanced-formula-techniques.md) |
+| Los `n` mayores de un grupo | `{=LARGE(IF(grupo=criterio,valores),k)}` + `INDEX/MATCH` | Valores mayores de un grupo y el nombre al que corresponde (con 2 condiciones en el `MATCH` si hay empates entre grupos) | [Advanced M2](../04-advanced/notas/modulo-02/practice-challenge.md) |
+| Matriz por un vector (cantidades × precios) | `=SUMPRODUCT(D12:H60*L6:P6)` · `{=SUM(D12:H60*L6:P6)}` | Una matriz de 49×5 por una fila de 5; con coma en `SUMPRODUCT` daría `#VALUE!` | [Advanced M2](../04-advanced/notas/modulo-02/practice-challenge.md) |
+| Quedarse con una mitad de una cuadrícula | `{=IF(cont_fila<=cont_col,valores,0)}` | Con contadores de fila (vertical) y de columna (horizontal), se queda con la mitad superior | [Advanced M2](../04-advanced/notas/modulo-02/assessment.md) |
+| Tolerar `#N/A` dentro de una matriz | `{=SUM(IFNA(H7:H17*I7:I17,0))}` | Los productos sin precio cuentan como 0 | [Advanced M2](../04-advanced/notas/modulo-02/02-advanced-formula-techniques.md) |
+
+**Cuidados**: las fórmulas matriciales no se editan celda a celda (se edita todo el bloque); en Excel 365 `Enter` también las derrama, pero en versiones antiguas sin CSE dan un resultado equivocado sin avisar; una tabla no admite matrices de varias celdas ni derrames; un rango normal que incluye la fila de totales de una tabla la cuenta como un dato más.
+
+**`VLOOKUP`/`HLOOKUP` o `INDEX` + `MATCH`**: `VLOOKUP` si los datos están en vertical, lo buscado está en la primera columna y se devuelve algo a la derecha; `HLOOKUP` si están en horizontal; `INDEX` + `MATCH` para devolver a la izquierda, con varios criterios, o si se insertan o borran columnas. Los tres con `0` o `FALSE` para coincidencia exacta.
 
 ## Por completar
 
