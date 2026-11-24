@@ -2,7 +2,7 @@
 
 Funciones y sintaxis vistas hasta ahora, con el módulo donde se explican. Se usan los nombres en inglés de las funciones, como en el curso. En países donde la coma es separador decimal, los argumentos se separan con `;` en vez de `,`.
 
-> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6) y Advanced (módulos 1-2). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6) y Advanced (módulos 1-3). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 ## Básicas y cálculo
 
@@ -209,6 +209,26 @@ Funciones y sintaxis vistas hasta ahora, con el módulo donde se explican. Se us
 **Cuidados**: las fórmulas matriciales no se editan celda a celda (se edita todo el bloque); en Excel 365 `Enter` también las derrama, pero en versiones antiguas sin CSE dan un resultado equivocado sin avisar; una tabla no admite matrices de varias celdas ni derrames; un rango normal que incluye la fila de totales de una tabla la cuenta como un dato más.
 
 **`VLOOKUP`/`HLOOKUP` o `INDEX` + `MATCH`**: `VLOOKUP` si los datos están en vertical, lo buscado está en la primera columna y se devuelve algo a la derecha; `HLOOKUP` si están en horizontal; `INDEX` + `MATCH` para devolver a la izquierda, con varios criterios, o si se insertan o borran columnas. Los tres con `0` o `FALSE` para coincidencia exacta.
+
+## Limpieza de datos
+
+| Problema | Fórmula | Para qué sirve | Dónde |
+|---|---|---|---|
+| Celdas en blanco que deben repetir el valor de arriba | `=IF(ISBLANK(Hoja1!A2), A1, Hoja1!A2)` | Se aplica en una hoja duplicada y se pega como valores. Alternativa sin fórmula: `Ctrl + G` → *Special* → *Blanks*, `=` + ↑, `Ctrl + Enter` | [Advanced M3](../04-advanced/notas/modulo-03/03-data-cleaning-preparation.md) |
+| Fecha guardada como texto (`2014.01.21`) | `=DATE(LEFT(A2,4), MID(A2,6,2), RIGHT(A2,2))` | Fecha real a partir de posiciones fijas; `DATE` pide año, mes y día | [Advanced M3](../04-advanced/notas/modulo-03/03-data-cleaning-preparation.md) |
+| Mes o día de la semana en texto | `=TEXT(F2,"mmmm")` · `"mmm"` · `"dddd"` · `"ddd"` | Muestra una fecha como texto. Los códigos son los ingleses incluso en un Excel en español | [Advanced M3](../04-advanced/notas/modulo-03/03-data-cleaning-preparation.md) |
+| Partes de una fecha real | `=YEAR(F2)` · `=MONTH(F2)` · `=DAY(F2)` | Camino inverso de `DATE` | [Advanced M3](../04-advanced/notas/modulo-03/03-data-cleaning-preparation.md) |
+| Espacios y caracteres de control | `=TRIM(CLEAN(A2))` | `CLEAN` quita los códigos 0-31 y `TRIM` los espacios sobrantes; `CLEAN` va dentro | [Advanced M3](../04-advanced/notas/modulo-03/03-data-cleaning-preparation.md) |
+| Diagnóstico de una celda | `=ISNUMBER(A2)` · `=LEN(A2)` · `=CODE(RIGHT(A2,1))` | ¿Es un número de verdad?, ¿cuántos caracteres tiene?, ¿qué carácter es el último? | [Advanced M3](../04-advanced/notas/modulo-03/03-data-cleaning-preparation.md) |
+| Espacio de no separación (código 160) | `=SUBSTITUTE(A2, CHAR(160), "")` | `TRIM` y `CLEAN` no lo quitan. `""` elimina; `" "` lo cambia por un espacio normal | [Advanced M3](../04-advanced/notas/modulo-03/03-data-cleaning-preparation.md) |
+| Texto que es número | `=VALUE(TRIM(SUBSTITUTE(A2, CHAR(160), "")))` | Quita el 160, los espacios y convierte; con otros caracteres da error | [Advanced M3](../04-advanced/notas/modulo-03/03-data-cleaning-preparation.md) |
+| Separar un registro en partes | `=FIND(" ", N5, 1)` · `=FIND(" ", N5, O5+1)` | Posición del 1.er y del 2.º espacio; `LEFT` y `MID` cortan con esas posiciones | [Advanced M3](../04-advanced/notas/modulo-03/assessment.md) |
+| Extraer hasta el final de un texto | `=VALUE(MID(N5, Q5+2, 99))` | Un número grande como tercer argumento de `MID` devuelve lo que quede | [Advanced M3](../04-advanced/notas/modulo-03/assessment.md) |
+| Edad en años cumplidos | `=INT(YEARFRAC(nacimiento, fecha))` | `YEAR(fecha)-YEAR(nacimiento)` se equivoca por un año si aún no cumplió años | [Advanced M3](../04-advanced/notas/modulo-03/practice-challenge.md) |
+
+**Orden de trabajo**: diagnosticar, limpiar con funciones, fijar los resultados (*Paste Values*) y **actualizar** las tablas dinámicas (*Analyze → Refresh*, `Alt + F5`). Conviene guardar los datos originales en una hoja aparte. Código ASCII útiles: espacio = 32, `A` = 65, espacio de no separación = 160. `CHAR` llega hasta 255; para más caracteres, `UNICHAR` y `UNICODE`.
+
+**Cuidados**: `ISBLANK` es `FALSE` si la celda contiene un espacio; `SUBSTITUTE` distingue mayúsculas y reemplaza todas las apariciones (cuarto argumento opcional para elegir una); un texto siempre es "mayor" que cualquier número en una comparación, por eso `IF(texto>=20, ...)` sale siempre `TRUE`; un enlace a una celda vacía devuelve `0`, no una celda vacía.
 
 ## Por completar
 

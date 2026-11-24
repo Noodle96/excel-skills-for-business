@@ -2,7 +2,7 @@
 
 En Mac, `Cmd` sustituye a `Ctrl` salvo que se indique otra cosa. Lista completa: [Microsoft Support (Windows)](https://support.office.com/en-us/article/Excel-keyboard-shortcuts-and-function-keys-for-Windows-1798d9d5-842a-42b8-9c99-9b7213f0040f) · [Microsoft Support (Mac)](https://support.office.com/en-us/article/Keyboard-shortcuts-in-Excel-2016-for-Mac-acf5419e-1f87-444d-962f-4e951a658ccd).
 
-> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6; el módulo 5 no trajo atajos nuevos en su Toolbox) y Advanced (módulos 1-2). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6; el módulo 5 no trajo atajos nuevos en su Toolbox) y Advanced (módulos 1-3). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 ## Archivo e impresión
 | Atajo | Acción | Dónde se vio |
@@ -25,7 +25,7 @@ En Mac, `Cmd` sustituye a `Ctrl` salvo que se indique otra cosa. Lista completa:
 | `Enter` / `Tab` | Confirmar el cambio y pasar a la celda de **abajo** / de la **derecha** | Advanced M1 |
 | `Shift + F2` | Insertar o editar un comentario | Advanced M1 |
 | `Ctrl + Enter` | Terminar de editar **y quedarse en la misma celda** | Intermediate I M3 |
-| `Ctrl + ;` | Insertar la fecha de hoy como valor **fijo** | Intermediate I M2 |
+| `Ctrl + ;` (Mac: `Control + ;`) | Insertar la fecha de hoy como valor **fijo**, a diferencia de `TODAY()`, que es volátil y se recalcula con cada cambio. El Toolbox del Advanced M3 da `Cmd + ;` para la fecha en Mac, pero según la documentación de Microsoft ese es el atajo de la **hora**; en Mac, conviene probar cuál responde | Intermediate I M2, Advanced M3 |
 | `Ctrl + Shift + ;` (Mac: `Cmd + ;`) | Insertar la hora actual como valor **fijo** | Intermediate I M2 |
 | `Ctrl + Shift + +` (Mac: `Control + I`) | Con una fila o columna **entera seleccionada**, insertar una fila o columna nueva (antes se vio como `Ctrl + Signo más`) | Essentials M4, Intermediate II M2 |
 | `Ctrl + -` (Windows y Mac) | Con una fila o columna seleccionada, eliminarla | Essentials M4, Intermediate II M2 |
@@ -102,6 +102,7 @@ En Mac, `Cmd` sustituye a `Ctrl` salvo que se indique otra cosa. Lista completa:
 | `Ctrl + T` (Mac: `Cmd + T` o `Ctrl + T`) | Insertar tabla | Intermediate I M5 |
 | `Alt + F5` | Actualizar la tabla dinámica seleccionada | Intermediate I M6 |
 | `Ctrl + Alt + F5` | Actualizar todas las tablas dinámicas y conexiones | Intermediate I M6 |
+| `Ctrl + G` → *Special* → *Blanks* | Seleccionar solo las celdas vacías de un rango (para rellenarlas con `=` y ↑ y terminar con `Ctrl + Enter`) | Advanced M3 (reto) |
 
 ## Gráficos
 | Atajo | Acción | Dónde se vio |

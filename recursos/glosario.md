@@ -2,7 +2,7 @@
 
 Términos del curso con una definición breve. Ordenados alfabéticamente por el término en inglés, como aparece en el curso.
 
-> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6) y Advanced (módulos 1-2). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6) y Advanced (módulos 1-3). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 - **#N/A**: error que suele aparecer cuando una función de búsqueda no encuentra el valor buscado en la tabla.
 - **Active Cell (celda activa)**: la celda seleccionada en ese momento, con borde grueso.
@@ -11,10 +11,12 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Array (matriz)**: cuadrícula de cualquier número de celdas. En la barra de fórmulas, los dos puntos entre dos referencias indican una matriz (`A5:A7`).
 - **Array Constant (constante matricial)**: matriz de **valores** (no de referencias) escrita entre llaves, por ejemplo `{1;2;3}` (`;` separa filas y `,` columnas en Excel en inglés).
 - **Array Formula (fórmula matricial)**: fórmula que trabaja con matrices completas; se confirma con `Ctrl + Shift + Enter` y se muestra con llaves `{ }`. También se llama fórmula **CSE**.
+- **ASCII (American Standard Code for Information Interchange)**: tabla que asigna a cada carácter un código numérico (el espacio es 32, la `A` mayúscula 65), necesaria porque el ordenador solo almacena datos en binario. `CODE` devuelve el código de un carácter y `CHAR` hace lo contrario.
 - **Automated drop-down List (lista desplegable automática)**: lista desplegable que apunta a una lista de búsqueda guardada en un rango con nombre y una tabla; se actualiza sola cuando cambia esa lista.
 - **Axes X & Y (ejes)**: el eje X va abajo y suele llevar las categorías; el eje Y va a un lado y lleva los valores. En los gráficos de barras están invertidos.
 - **Base Case Scenario (escenario base)**: el escenario en que todas las celdas variables tienen los valores esperados al inicio del análisis.
 - **Best (Worst) Case Scenario (mejor o peor caso)**: el escenario en que las celdas variables tienen los valores más (menos) favorables desde nuestra perspectiva.
+- **Binary (binario)**: lenguaje de bajo nivel que entiende el ordenador, hecho solo de 0 y 1.
 - **Calculated Column (columna calculada)**: columna de una tabla cuya fórmula se rellena sola en todas las filas, normalmente con referencias estructuradas (`=[@Precio]*[@Cantidad]`).
 - **Cell (celda)**: intersección de una columna y una fila; se nombra con la letra y el número (`B3`).
 - **Chart Area (área del gráfico)**: todo el gráfico, con sus series, ejes, títulos y leyendas. Es la zona desde la que se arrastra el gráfico completo.
@@ -41,6 +43,7 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Data Validation (validación de datos)**: método para reducir errores limitando lo que Excel acepta en una celda a los resultados razonables (lista, número, fecha, longitud o una fórmula personalizada). Solo controla lo que se escribe, no lo que se pega ni los datos ya existentes.
 - **Dataset (conjunto de datos)**: conjunto de datos con campos (columnas) que suelen tener distinto formato.
 - **Debug (depurar)**: identificar y eliminar errores del código VBA de una macro.
+- **Decimal**: sistema numérico de base 10 (13, 32). Es el que se usa para los códigos ASCII, porque es más fácil de leer que el binario.
 - **Delimited (delimitado)**: datos separados por caracteres de un tipo concreto (comas, punto y coma, etc.).
 - **Dependent Cell (celda dependiente)**: celda cuya fórmula se refiere a la celda activa (si `D5` es `=A1`, `D5` depende de `A1`).
 - **Displayed Value (valor mostrado)**: el valor de una celda que ve el usuario, según su formato.
@@ -76,6 +79,8 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Module (módulo)**: unidad de almacenamiento de un conjunto de macros.
 - **Multi-Cell Array Formula (fórmula matricial de varias celdas)**: fórmula matricial que da resultados en varias celdas con una sola fórmula; se selecciona antes todo el rango de salida.
 - **Named Range (rango con nombre)**: nombre memorable para una celda o rango, que funciona como referencia absoluta.
+- **Non-Breaking Space (espacio de no separación)**: espacio con código 160, típico de datos copiados de páginas web. Se ve igual que un espacio normal (32), pero `TRIM` y `CLEAN` no lo quitan; se elimina con `SUBSTITUTE(texto, CHAR(160), "")`.
+- **Non-Printing Character (carácter no imprimible)**: carácter que está en la celda pero no se ve ni se imprime (por ejemplo un espacio, una tabulación o los códigos ASCII 0 a 31). `CLEAN` quita algunos, no todos.
 - **Page Break (salto de página)**: divide la hoja en páginas al imprimir; automático (línea punteada) o manual (línea continua).
 - **Paste Special (pegado especial)**: pega solo parte de lo copiado (valores, formato, validación...), en vez de todo el contenido y características de la celda.
 - **PivotChart (gráfico dinámico)**: gráfico basado en una tabla dinámica, con su misma capacidad de resumen y filtro.
@@ -90,6 +95,7 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Range (rango)**: dos o más celdas. **Adyacente** (`A1:C2`, el `:` significa "hasta") o **no adyacente** (`A1:A2,C1:C2`).
 - **Range VLOOKUP**: búsqueda sin coincidencia exacta; usa el mayor valor menor o igual al buscado y exige datos ordenados. Es el comportamiento por defecto.
 - **Reference (referencia)**: la dirección de una celda. **Relativa** (`D4`, cambia al copiar), **absoluta** (`$D$4`, no cambia) o **mixta** (`$D4`, `D$4`). **3D**: extendida a varias hojas (`Enero:Diciembre!B5`).
+- **Refresh (actualizar)**: volver a leer los datos de origen en una tabla dinámica (*Analyze → Refresh*, `Alt + F5`). Tras limpiar los datos hay que hacerlo, porque la tabla no se actualiza sola.
 - **Relative Macro (macro relativa)**: macro grabada con *Usar referencias relativas*; sirve cuando las tareas no son idénticas, porque registra posiciones relativas a la celda activa (por ejemplo, "bajar un paso") en vez de una celda fija como `B9`.
 - **Ribbon (cinta de opciones)**: barra principal con pestañas (Inicio, Insertar...) que agrupan los comandos.
 - **Scenario (escenario)**: conjunto concreto de valores dados a las celdas variables, con nombre. **Scenario Manager** (administrador de escenarios) los guarda y los compara; su **Scenario Summary** es una hoja estática con una columna por escenario.
@@ -114,10 +120,12 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Transpose (transponer)**: convertir una fila de valores en columna, o al revés. Con la función `TRANSPOSE` (matricial, vinculada al origen) o con *Pegado especial → Transponer* (resultado fijo).
 - **Trendline (línea de tendencia)**: línea sobre un gráfico que muestra la tendencia de los datos: lineal, exponencial, logarítmica, polinómica, potencial o media móvil.
 - **Trusted Location (ubicación de confianza)**: ubicación cuyas macros se habilitan automáticamente, sin tener que habilitarlas.
+- **Unicode**: estándar de codificación que cubre muchos más caracteres que ASCII, incluidos los de otros idiomas. `UNICODE(texto)` devuelve el código del primer carácter y `UNICHAR` devuelve el carácter de un código (`CHAR` solo llega a 255).
 - **Value (valor)**: dato numérico en una celda; solo los valores se pueden usar en cálculos.
 - **Variable Cell (celda variable)**: celda con un valor que se permite cambiar al inicio del análisis (la que modifican Goal Seek, Solver o un escenario).
 - **VBA (Visual Basic for Applications) / VBE (Visual Basic Editor)**: el código que usa Excel para registrar macros / la ventana (`Alt + F11`) donde se crean y editan.
 - **VLOOKUP**: función de búsqueda vertical: busca un valor en la primera columna de una tabla y devuelve otro de la misma fila.
+- **Volatile Function (función volátil)**: función que se recalcula cada vez que se cambia algo en la hoja, como `TODAY()` y `NOW()`, y consume recursos de cálculo. La fecha fija se inserta con `Ctrl + ;`.
 - **Lookup Table / Table Array (tabla de búsqueda)**: la tabla que contiene el valor buscado y el que se quiere recuperar.
 - **Watch Window (ventana de inspección)**: barra de herramientas que permite vigilar celdas y sus fórmulas mientras uno navega por el libro.
 - **What-If Analysis (análisis de hipótesis)**: grupo de herramientas (Data Table, Goal Seek, Scenario Manager) que permite probar distintos valores en las fórmulas e investigar los resultados.
