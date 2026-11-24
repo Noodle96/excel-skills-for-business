@@ -44,7 +44,7 @@ Al terminar el curso podrás:
 |---|---|---|
 | [x] 01 | Spreadsheet Design and Documentation | [notas](notas/modulo-01/) |
 | [x] 02 | Advanced Formula Techniques | [notas](notas/modulo-02/) |
-| [ ] 03 | Data Cleaning and Preparation | [notas](notas/modulo-03/) |
+| [x] 03 | Data Cleaning and Preparation | [notas](notas/modulo-03/) |
 | [ ] 04 | Financial Functions and Working with Dates | [notas](notas/modulo-04/) |
 | [ ] 05 | Advanced Lookup Functions | [notas](notas/modulo-05/) |
 | [ ] 06 | Building Professional Dashboards | [notas](notas/modulo-06/) |
