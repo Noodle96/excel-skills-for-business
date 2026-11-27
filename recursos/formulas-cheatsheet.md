@@ -2,7 +2,7 @@
 
 Funciones y sintaxis vistas hasta ahora, con el módulo donde se explican. Se usan los nombres en inglés de las funciones, como en el curso. En países donde la coma es separador decimal, los argumentos se separan con `;` en vez de `,`.
 
-> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6) y Advanced (módulos 1-3). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6) y Advanced (módulos 1-4). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 ## Básicas y cálculo
 
@@ -230,8 +230,42 @@ Funciones y sintaxis vistas hasta ahora, con el módulo donde se explican. Se us
 
 **Cuidados**: `ISBLANK` es `FALSE` si la celda contiene un espacio; `SUBSTITUTE` distingue mayúsculas y reemplaza todas las apariciones (cuarto argumento opcional para elegir una); un texto siempre es "mayor" que cualquier número en una comparación, por eso `IF(texto>=20, ...)` sale siempre `TRUE`; un enlace a una celda vacía devuelve `0`, no una celda vacía.
 
+## Fechas para cálculos
+
+| Fórmula | Sintaxis | Para qué sirve | Dónde |
+|---|---|---|---|
+| `EOMONTH` | `=EOMONTH(fecha, meses)` | Último día del mes, tantos meses después (o antes, si es negativo) | [Advanced M4](../04-advanced/notas/modulo-04/04-financial-functions-dates.md) |
+| `EDATE` | `=EDATE(fecha, meses)` | La misma fecha desplazada en meses | [Advanced M4](../04-advanced/notas/modulo-04/04-financial-functions-dates.md) |
+| `WORKDAY.INTL` | `=WORKDAY.INTL(inicio, días, [finde], [festivos])` | Suma días hábiles con fin de semana configurable (`1` = sábado y domingo, o cadena como `"0001011"` desde el lunes) | [Advanced M4](../04-advanced/notas/modulo-04/04-financial-functions-dates.md) |
+| `DATEDIF` | `=DATEDIF(inicio, fin, "Y"/"M"/"D"/"YM"/"MD"/"YD")` | Diferencia entre fechas; `"MD"` puede fallar | [Advanced M4](../04-advanced/notas/modulo-04/04-financial-functions-dates.md) |
+
+## Financieras
+
+Dinero que **entra** es positivo y el que **sale**, negativo. La tasa y los periodos van en la **misma unidad**.
+
+| Fórmula | Sintaxis | Para qué sirve | Dónde |
+|---|---|---|---|
+| `PMT` | `=PMT(rate, nper, pv, [fv], [type])` | Pago o ahorro de cada periodo | [Advanced M4](../04-advanced/notas/modulo-04/04-financial-functions-dates.md) |
+| `PV` | `=PV(rate, nper, pmt, [fv], [type])` | Cuánto vale hoy / cuánto invertir ahora | [Advanced M4](../04-advanced/notas/modulo-04/04-financial-functions-dates.md) |
+| `FV` | `=FV(rate, nper, pmt, [pv], [type])` | Cuánto habrá al final | [Advanced M4](../04-advanced/notas/modulo-04/04-financial-functions-dates.md) |
+| `NPV` | `=NPV(tasa, flujos_futuros) + inversión_inicial` | Valor presente neto; la inversión (negativa) va **fuera** | [Advanced M4](../04-advanced/notas/modulo-04/04-financial-functions-dates.md) |
+| `IRR` | `=IRR(todos_los_flujos, [guess])` | Tasa que hace `NPV` = 0 (por periodo) | [Advanced M4](../04-advanced/notas/modulo-04/04-financial-functions-dates.md) |
+| `SLN` | `=SLN(cost, salvage, life)` | Depreciación en línea recta | [Advanced M4](../04-advanced/notas/modulo-04/04-financial-functions-dates.md) |
+| `SYD` | `=SYD(cost, salvage, life, period)` | Depreciación por suma de dígitos | [Advanced M4](../04-advanced/notas/modulo-04/04-financial-functions-dates.md) |
+| `DDB` | `=DDB(cost, salvage, life, period, [factor])` | Doble saldo decreciente; nunca baja del valor residual | [Advanced M4](../04-advanced/notas/modulo-04/04-financial-functions-dates.md) |
+
+**Patrones**:
+
+| Necesidad | Fórmula |
+|---|---|
+| Tasa mensual desde una nominal anual | `=tasa_anual/12` |
+| Tasa mensual desde una efectiva anual | `=(1+tasa_anual)^(1/12)-1` |
+| Tasa efectiva anual desde una mensual | `=(1+tasa_mensual)^12-1` |
+| Interés de una fila de un préstamo | `=saldo_anterior*$tasa_por_periodo` |
+| Interés por días | `=saldo*$tasa_anual*(fecha-fecha_anterior)/365` |
+
 ## Por completar
 
-Estas categorías se llenan al avanzar por los cursos siguientes:
+Estas categorías se llenan al avanzar por los módulos siguientes:
 
-- **Financieras** (`FV`, `PV`, `PMT`, `NPV`, `IRR`, depreciación) — Advanced
+- **Búsquedas dinámicas** (`INDIRECT`, `ADDRESS`, `OFFSET`) — Advanced

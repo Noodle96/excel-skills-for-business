@@ -2,11 +2,14 @@
 
 Términos del curso con una definición breve. Ordenados alfabéticamente por el término en inglés, como aparece en el curso.
 
-> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6) y Advanced (módulos 1-3). Se amplía al cerrar cada módulo de los cursos siguientes.
+> Cobertura: Essentials (módulos 1-6), Intermediate I (módulos 1-6) e Intermediate II (módulos 1-6) y Advanced (módulos 1-4). Se amplía al cerrar cada módulo de los cursos siguientes.
 
 - **#N/A**: error que suele aparecer cuando una función de búsqueda no encuentra el valor buscado en la tabla.
+- **Accelerated Depreciation (depreciación acelerada)**: método que carga más depreciación en los primeros años de vida del activo, como `SYD` y `DDB`.
 - **Active Cell (celda activa)**: la celda seleccionada en ese momento, con borde grueso.
 - **Add-in (complemento)**: función que se agrega a Excel para complementar las existentes. Solver es un complemento y hay que activarlo (Archivo > Opciones > Complementos).
+- **Amortization (amortización)**: forma de pagar un préstamo en la que cada cuota cubre primero el interés y el resto reduce la deuda. Su tabla es el **calendario de préstamo** (*Loan Schedule*).
+- **Annualised Interest Rate (tasa anualizada)**: tasa de un periodo expresada por año multiplicándola por el número de periodos (2% mensual = 24%). Es nominal; la **efectiva anual** capitaliza (`(1+i)^12-1`).
 - **Argument (argumento)**: cada entrada que recibe una función; se separan con comas y se escriben entre paréntesis.
 - **Array (matriz)**: cuadrícula de cualquier número de celdas. En la barra de fórmulas, los dos puntos entre dos referencias indican una matriz (`A5:A7`).
 - **Array Constant (constante matricial)**: matriz de **valores** (no de referencias) escrita entre llaves, por ejemplo `{1;2;3}` (`;` separa filas y `,` columnas en Excel en inglés).
@@ -18,6 +21,7 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Best (Worst) Case Scenario (mejor o peor caso)**: el escenario en que las celdas variables tienen los valores más (menos) favorables desde nuestra perspectiva.
 - **Binary (binario)**: lenguaje de bajo nivel que entiende el ordenador, hecho solo de 0 y 1.
 - **Calculated Column (columna calculada)**: columna de una tabla cuya fórmula se rellena sola en todas las filas, normalmente con referencias estructuradas (`=[@Precio]*[@Cantidad]`).
+- **Capital Budgeting (presupuesto de capital)**: técnicas para elegir entre proyectos cuando los recursos no alcanzan para todos.
 - **Cell (celda)**: intersección de una columna y una fila; se nombra con la letra y el número (`B3`).
 - **Chart Area (área del gráfico)**: todo el gráfico, con sus series, ejes, títulos y leyendas. Es la zona desde la que se arrastra el gráfico completo.
 - **Chart Sheet (hoja de gráfico)**: hoja que contiene solo un gráfico. Si el gráfico está junto a otros datos, es un gráfico **incrustado** (*Embedded Chart*).
@@ -32,6 +36,8 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Conditional Logic (lógica condicional)**: controlar el resultado de una celda según se cumpla o no una condición (`IF`).
 - **Consolidate (consolidar)**: herramienta que combina varios rangos u hojas en un resumen, por posición o por etiquetas.
 - **Constraint (restricción)**: límite al valor de una celda concreta; en Solver, una condición que la solución debe cumplir (`<=`, `=`, `>=`, entero, binario).
+- **Conventional Cash Flows (flujos convencionales)**: flujos con un solo cambio de signo; son los únicos que garantizan una `IRR` única.
+- **Cost of Capital (costo de capital)**: rendimiento que exigen los accionistas por invertir su dinero en la empresa.
 - **Criteria Range (rango de criterio)**: el rango de datos donde se evalúa la condición de una función como `COUNTIFS` o `SUMIFS`.
 - **CSE (Control-Shift-Enter)**: forma de confirmar una fórmula matricial con `Ctrl + Shift + Enter`. En Excel 365 la mayoría de las fórmulas matriciales se confirman con `Enter` y se **derraman** solas.
 - **Dashboard (panel)**: pantalla de resumen con gráficos y tablas, a veces interactiva, que da una vista rápida de los datos.
@@ -46,6 +52,7 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Decimal**: sistema numérico de base 10 (13, 32). Es el que se usa para los códigos ASCII, porque es más fácil de leer que el binario.
 - **Delimited (delimitado)**: datos separados por caracteres de un tipo concreto (comas, punto y coma, etc.).
 - **Dependent Cell (celda dependiente)**: celda cuya fórmula se refiere a la celda activa (si `D5` es `=A1`, `D5` depende de `A1`).
+- **Depreciation (depreciación)**: reducción del valor de un activo con el tiempo; se registra como gasto.
 - **Displayed Value (valor mostrado)**: el valor de una celda que ve el usuario, según su formato.
 - **Drop-down List (lista desplegable)**: lista que aparece junto a una celda con validación de tipo Lista, con las opciones permitidas.
 - **Dual data entry (entrada doble de datos)**: escribir a mano el mismo dato en más de un lugar. Se evita: produce errores e inconsistencias y obliga a rastrear dónde actualizar la misma información.
@@ -58,6 +65,7 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Formula Auditing (auditoría de fórmulas)**: grupo de la pestaña Fórmulas con herramientas para identificar y corregir errores en las fórmulas.
 - **Formula Bar (barra de fórmulas)**: muestra el contenido real de la celda; a su izquierda está el Cuadro de nombres (*Name Box*).
 - **Function (función)**: "mini-programa" que se usa dentro de una fórmula (`SUM`, `MID`...). Puede estar **anidada** (*Nested*) dentro de otra, que la usa como argumento.
+- **Future Value (valor futuro, FV)**: cuánto valdrá una inversión en el futuro, o el saldo que queda al final de un préstamo.
 - **Goal Seek (buscar objetivo)**: herramienta de What-If Analysis que cambia **una** celda de entrada hasta que una fórmula alcance un valor exacto. Es iterativo y aproximado.
 - **Gridlines (líneas de cuadrícula)**: líneas que cruzan el área de trazado y ayudan a seguir los valores de los ejes.
 - **Hard-coding (valores fijos en fórmulas)**: escribir un número directamente dentro de una fórmula en vez de apuntar a una celda de supuestos. Se evita a toda costa, porque esconde el supuesto y complica los cambios.
@@ -65,9 +73,12 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Implicit Intersection (intersección implícita)**: comportamiento de Excel antiguo cuando una fórmula normal recibe un rango donde esperaba un valor: toma solo el valor de la misma fila (o columna). Por eso las fórmulas matriciales necesitan `Ctrl + Shift + Enter` en versiones sin matrices dinámicas.
 - **INDEX**: devuelve un valor, o la referencia a un valor, desde una tabla o rango según la fila y la columna indicadas. Argumentos: *array*, *row_num*, *col_num*, *area_num*.
 - **Input Message (mensaje de entrada)**: aviso que aparece al hacer clic en una celda con validación, para orientar sobre qué valores son razonables.
+- **Interest Rate vs Interest (tasa de interés e interés)**: la tasa es el porcentaje que se cobra; el interés es el monto que se paga.
+- **IRR (Internal Rate of Return, tasa interna de retorno)**: tasa de rendimiento de un proyecto; la que hace que su valor presente neto sea cero.
 - **Iteration (iteración)**: repetición de un cálculo por parte de Excel; clave para resolver referencias circulares con el cálculo iterativo.
 - **Label (etiqueta)**: texto sin formato de número en una celda; no se usa en cálculos.
 - **Legend (leyenda)**: recuadro que indica qué color o símbolo representa cada serie.
+- **Life (vida útil)**: tiempo que se estima que un activo será útil.
 - **Linking (vínculo)**: fórmula que toma un valor de otro libro. El valor es el de la última actualización del vínculo.
 - **Logical Test (prueba lógica)**: lo que se le pide a Excel comprobar para saber si es verdadero o falso; primer argumento de `IF` (ej. `B4>5`).
 - **Logical Operator (operador lógico)**: la relación de la prueba lógica: `=`, `>`, `<`, `>=`, `<=`, `<>`.
@@ -81,6 +92,8 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Named Range (rango con nombre)**: nombre memorable para una celda o rango, que funciona como referencia absoluta.
 - **Non-Breaking Space (espacio de no separación)**: espacio con código 160, típico de datos copiados de páginas web. Se ve igual que un espacio normal (32), pero `TRIM` y `CLEAN` no lo quitan; se elimina con `SUBSTITUTE(texto, CHAR(160), "")`.
 - **Non-Printing Character (carácter no imprimible)**: carácter que está en la celda pero no se ve ni se imprime (por ejemplo un espacio, una tabulación o los códigos ASCII 0 a 31). `CLEAN` quita algunos, no todos.
+- **NPER (número de periodos)**: cantidad de periodos de pago (4 años con pagos mensuales = 48).
+- **NPV (Net Present Value, valor presente neto)**: valor hoy de los flujos futuros de un proyecto menos su inversión.
 - **Page Break (salto de página)**: divide la hoja en páginas al imprimir; automático (línea punteada) o manual (línea continua).
 - **Paste Special (pegado especial)**: pega solo parte de lo copiado (valores, formato, validación...), en vez de todo el contenido y características de la celda.
 - **PivotChart (gráfico dinámico)**: gráfico basado en una tabla dinámica, con su misma capacidad de resumen y filtro.
@@ -88,6 +101,8 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Plot Area (área de trazado)**: la parte del gráfico delimitada por los ejes.
 - **Precedent Cell (celda precedente)**: celda a la que se refiere la fórmula de la celda activa (si `D5` es `=A1`, `A1` es precedente de `D5`).
 - **Precision (precisión)**: nivel de exactitud de un cálculo; el valor almacenado tiene la máxima, la del valor mostrado se puede cambiar.
+- **Present Value (valor presente, PV)**: monto invertido o prestado hoy; valor actual de una serie de flujos.
+- **Principal**: parte de una cuota que reduce la deuda, descontado el interés; también se llama así al monto prestado.
 - **Print Area / Print Titles (área / títulos de impresión)**: la sección que se imprime / las filas o columnas que se repiten en cada página impresa.
 - **Project Explorer (explorador de proyectos)**: panel del editor de VBA para moverse entre las macros de distintos libros.
 - **Protection (protección)**: función de privacidad y seguridad para restringir la modificación o el acceso a un archivo o una hoja.
@@ -98,7 +113,9 @@ Términos del curso con una definición breve. Ordenados alfabéticamente por el
 - **Refresh (actualizar)**: volver a leer los datos de origen en una tabla dinámica (*Analyze → Refresh*, `Alt + F5`). Tras limpiar los datos hay que hacerlo, porque la tabla no se actualiza sola.
 - **Relative Macro (macro relativa)**: macro grabada con *Usar referencias relativas*; sirve cuando las tareas no son idénticas, porque registra posiciones relativas a la celda activa (por ejemplo, "bajar un paso") en vez de una celda fija como `B9`.
 - **Ribbon (cinta de opciones)**: barra principal con pestañas (Inicio, Insertar...) que agrupan los comandos.
+- **Salvage Value (valor residual)**: lo que se estima que valdrá un activo al final de su vida útil.
 - **Scenario (escenario)**: conjunto concreto de valores dados a las celdas variables, con nombre. **Scenario Manager** (administrador de escenarios) los guarda y los compara; su **Scenario Summary** es una hoja estática con una columna por escenario.
+- **Sign Convention (convención de signos)**: en las funciones financieras de Excel, las entradas de dinero son positivas y las salidas, negativas.
 - **Single-Cell Array Formula (fórmula matricial de una celda)**: fórmula matricial que usa matrices por dentro pero da un solo resultado, como `=SUM(IF(A1:A9<10,A1:A9,0))`.
 - **Slicer (segmentación de datos)**: botones visuales para filtrar una tabla dinámica, que muestran qué filtros están activos.
 - **Solver**: complemento de optimización que maximiza, minimiza o lleva a un valor una celda objetivo cambiando varias celdas, con restricciones. Motores: Simplex LP (lineal), GRG Nonlinear (no lineal suave) y Evolutionary (modelos con saltos).
